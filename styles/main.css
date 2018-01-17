@@ -17,7 +17,7 @@ h1 {
 }
 
 h2 {
-    font-size: /* x.xrem */;
+    font-size: 24px/* x.xrem */;
     text-align: center;
     border-bottom: 1px solid #bbb;
 }
@@ -38,9 +38,4 @@ header img {
     width: auto;
     height: auto;
     float: right;
-}
-
-
-nav {
-    text-align: center;
 }
