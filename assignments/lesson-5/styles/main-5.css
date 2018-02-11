@@ -172,6 +172,9 @@ nav ul {
 nav li{
   padding: 0;
   margin: 0;
+  text-align: center;
+  font-size: 1.5em;
+  border: 1px solid #352e26;
 
 }
   

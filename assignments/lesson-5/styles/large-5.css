@@ -4,12 +4,3 @@
   article p.town-article img { width: 29.333%; }
   
 }
-nav ul li {
-  list-style-type: none;  
-  display: inline;
-  padding-right: 20px;
-   
-  text-align: center;  
-  font-size: 1.5em;
-
-}
