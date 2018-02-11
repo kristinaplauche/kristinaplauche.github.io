@@ -1,0 +1,202 @@
+/* This main css file contains the default rules and is geared toward the small/phone view */
+
+* { box-sizing: border-box;}  /* This wildcard applies to all elements ensuring a box layout model */
+
+body {
+  font-size: 16px;
+  /* Declare the base font-family - from google font api or other */
+  font-family: Georgia, Helvetica, sans-serif;
+
+
+}
+
+header, nav, main, footer { /* the comma means apply the following CSS declarations to all of the listed elements */
+  /* Declare the maximum width and other main element rules to limit the stretch on wide views */
+  
+  
+}
+img {
+  max-width: 100%;
+  height: auto;
+  overflow: auto;
+}
+
+header {
+  background-color: #352e26;
+  padding: 20px;
+  overflow: auto;
+
+
+}
+header h1 {
+  color: #edecda;
+  margin: 20px 10px 20px 150px;
+ 
+}
+
+header img {
+  float: left;
+  min-height: 100%;
+  
+  
+}
+header .subheading {
+  color: #edecda;
+  margin: 20px 10px 20px 150px;
+}
+
+
+
+
+nav button {}
+
+
+
+
+h1, h2, h3, p {
+  font-family: Helvetica, Arial, sans-serif;
+}
+h3 {
+  background-color: #352e26;
+  color: #edecda;
+  padding: 10px;
+  font-size: 1.2em;
+  letter-spacing: .1em;
+
+}
+
+main {
+  padding: 30px;
+
+}
+main h2 {}
+
+main figure { 
+  margin: 0 0 .2rem 2%; width:96%; 
+}
+
+main figure img { 
+  max-width: 100%; 
+clear: left;
+
+  overflow: auto;
+
+
+}
+
+table {
+  border-collapse: collapse;
+}
+thead {
+  background-color: #edecda;
+  
+}
+
+
+td, th {
+  border: 1px solid #352e26;
+  padding: 3px;
+}
+
+picture{
+  width: 50%;
+  height: auto;
+}
+
+
+section {
+  
+}
+article {
+  padding-bottom: 20px;
+}
+
+article p.town-article img {  /* This structure refers to img elements that are the posterity 
+  of paragraph elements within artcle elements */
+  width: 100%; /* fill the page in the small/phone view */
+  margin: auto;
+
+  padding-bottom: 20px;
+
+  
+}
+
+
+
+footer {
+
+  background-color: #d8d9de;
+  color: #352e26;
+  padding: 20px;
+  text-align: center; 
+  font-size: .7em;
+  clear: right;
+
+}
+footer aside {}
+footer>p {} /* This structure refers to p elements that are direct children of the footer element */
+
+/* Other Class Selectors */
+
+
+.weather {
+ float: left;
+ width: 45%;
+  padding: 30px;
+  text-align: center;
+  
+}
+
+
+
+@media only screen and (max-width: 37.5em) {
+.forecast {
+  display:none;
+}
+
+nav{
+  padding: 0px;
+  margin:0px;
+
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #6fa69c;
+  
+  
+}
+
+nav li{
+  padding: 0;
+  margin: 0;
+
+}
+  
+nav ul li a {
+  display: block;
+  color: #352e26;
+  padding: 10px;
+  text-decoration: none;
+  
+  
+
+}
+
+
+nav ul li.active a {
+  background-color: #edecda;
+  
+
+}
+
+nav ul li a:hover {
+  background-color: #f7d58d;
+  
+
+}
+
+
+}
