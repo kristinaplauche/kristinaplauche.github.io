@@ -150,12 +150,15 @@ main .townphoto {
 
 main .weather {
   
-  width: 48%;
+  min-width: 30%;
   display: inline-block;
   vertical-align: top;
   text-align: center;
 }
 
+main .wrapweather {
+  text-align: center;
+}
 
 
 
