@@ -1,0 +1,51 @@
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+* {
+    font-family: Ubuntu, sans-serif;
+}
+table,
+th,
+td {
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px;
+   
+}
+
+thead {
+    background-color: #7fb9c2;
+    font-size: 1.3em;
+    font-weight: bold;
+    
+}
+
+tbody>tr>th {
+    background-color: #628ca6;
+    color: white;
+    
+}
+
+tbody>tr:nth-child(even) {
+    background: #e7f0ed;
+}
+
+tbody>tr:nth-child(odd) {
+    background: #e7ffed;
+}
+
+tbody>tr:nth-child(5) td:nth-child(3){
+    background-color: #628ca6;
+    color: white;
+}
+
+tbody {
+    
+}
+
+tfoot {
+    font-size: .7em;
+    background-color: #7fb9c2;
+   
+
+}
