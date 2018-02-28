@@ -35,7 +35,10 @@
   }
  
   fieldset {
-    max-width: 50%;
+    width: 50%;
+    margin: auto;
 
   }
+
+
 }

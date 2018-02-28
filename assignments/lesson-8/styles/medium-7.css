@@ -94,5 +94,6 @@ fieldset {
   padding: 20px;
   justify-content: flex-start;
   max-width: 75%;
+  margin: auto;
 }
 }

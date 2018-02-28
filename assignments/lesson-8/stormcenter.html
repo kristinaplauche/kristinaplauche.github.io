@@ -62,112 +62,107 @@
 
     <main>
         <form>
-            <fieldset>
-                <h2>Personal Information</h2>
-                <div>
-                    <label>Full Name</label>
-                </div>
-                <div>
-                    <input type="text" name="name" required pattern="[a-zA-Z ]+" minlength="5">
-                </div>
-                <div>
-                    <label>Email</label>
-                </div>
-                <div>
-                    <input type="email" name="email" placeholder="name@example.com">
-                </div>
+            <div class="form-wrap">
+                <fieldset>
+                    <h2>Personal Information</h2>
+                    <div>
+                        <label>Full Name</label>
+                    </div>
+                    <div>
+                        <input type="text" name="name" required pattern="[a-zA-Z ]+" minlength="5">
+                    </div>
+                    <div>
+                        <label>Email</label>
+                    </div>
+                    <div>
+                        <input type="email" name="email" placeholder="name@example.com">
+                    </div>
 
-                <div>
-                    <label>Phone Number</label>
-                </div>
-                <div>
-                    <input type="tel" name="phone" required>
-                </div>
+                    <div>
+                        <label>Phone Number</label>
+                    </div>
+                    <div>
+                        <input type="tel" name="phone" required>
+                    </div>
 
-                <div>
-                    <label>Zip Code</label>
-                </div>
-                <div>
-                    <input type="number" name="zip" required>
-                </div>
-            </fieldset>
+                    <div>
+                        <label>Zip Code</label>
+                    </div>
+                    <div>
+                        <input type="number" name="zip" required>
+                    </div>
+                </fieldset>
 
-            <fieldset>
-                <h2>Storm Information</h2>
-                <div>
-                    <label>Storm Date</label>
-                </div>
-                <div>
-                    <input type="date" name="storm-date">
-                </div>
+                <fieldset>
+                    <h2>Storm Information</h2>
+                    <div>
+                        <label>Storm Date</label>
+                    </div>
+                    <div>
+                        <input type="date" name="storm-date">
+                    </div>
 
-                <div>
-                    <label>Storm Type</label>
-                </div>
-                <div>
-                    <input list="storm-type">
-                    <datalist id="storm-type">
-                        <option value="Flash Flood">
-                            <option value="Hail">
-                                <option value="Hurricane">
-                                    <option value="Thunderstorm">
-                                        <option value="Tornado">
-                    </datalist>
-                </div>
-
-
-                <div>
-                    <label>Storm Severity</label>
-                </div>
-                <div>
-                    <input type="range" name="storm-severity" min="1" max="10">
-                </div>
-
-                <div>
-                    <label>Storm Region</label>
-                </div>
-                <div>
-                    <select name="storm-region">
-                        <option selected disabled>--Select Region--</option>
-                        <option value="franklin">Franklin</option>
-                        <option value="greenville">Greenville</option>
-                        <option value="springfield">Springfield</option>
-                    </select>
-
-                </div>
-                <div class="radio-button">
-                    <p>User In-Danger?</p>
-                    <input type="radio" name="danger" value=""> Yes
-                    <br>
-                    <input type="radio" name="danger" value=""> No
-                    <br>
-                    <input type="radio" name="danger" value=""> Maybe
-                    <br>
-                </div>
-
-            </fieldset>
-
-            <fieldset>
-                <h2>Additional Information</h2>
-                <div>
-                    <label> Comments</label>
-                </div>
-                <div>
-                    <textarea name="comments"></textarea>
-                </div>
-
-                <div>
-                    <button class="submit" type="submit" formaction="thank-you.html">Submit</button>
-                </div>
-            </fieldset>
+                    <div>
+                        <label>Storm Type</label>
+                    </div>
+                    <div>
+                        <input list="storm-type">
+                        <datalist id="storm-type">
+                            <option value="Flash Flood">
+                                <option value="Hail">
+                                    <option value="Hurricane">
+                                        <option value="Thunderstorm">
+                                            <option value="Tornado">
+                        </datalist>
+                    </div>
 
 
+                    <div>
+                        <label>Storm Severity</label>
+                    </div>
+                    <div>
+                        <input type="range" name="storm-severity" min="1" max="10">
+                    </div>
 
+                    <div>
+                        <label>Storm Region</label>
+                    </div>
+                    <div>
+                        <select name="storm-region">
+                            <option selected disabled>--Select Region--</option>
+                            <option value="franklin">Franklin</option>
+                            <option value="greenville">Greenville</option>
+                            <option value="springfield">Springfield</option>
+                        </select>
 
+                    </div>
+                    <div class="radio-button">
+                        <p>User In-Danger?</p>
+                        <input type="radio" name="danger" value=""> Yes
+                        <br>
+                        <input type="radio" name="danger" value=""> No
+                        <br>
+                        <input type="radio" name="danger" value=""> Maybe
+                        <br>
+                    </div>
 
+                </fieldset>
 
+                <fieldset>
+                    <h2>Additional Information</h2>
+                    <div>
+                        <label> Comments</label>
+                    </div>
+                    <div>
+                        <textarea name="comments"></textarea>
+                    </div>
 
+                    <div>
+                        <button class="submit" type="submit" formaction="thank-you.html">Submit</button>
+                    </div>
+                </fieldset>
 
+            </div>
         </form>
     </main>
 

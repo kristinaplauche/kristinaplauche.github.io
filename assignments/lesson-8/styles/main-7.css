@@ -267,7 +267,8 @@ footer>p {} /* This structure refers to p elements that are direct children of t
 form{
   display: flex;
   flex-direction: column;
-  justify-content: center;  
+  justify-content: center; 
+ 
 
 }
 
@@ -342,6 +343,11 @@ fieldset h2{
 
 .thank-you {
   text-align: center;
+}
+
+.form-wrap {
+ 
+ 
 }
 
 
