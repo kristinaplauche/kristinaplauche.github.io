@@ -90,5 +90,9 @@ nav ul.hide {
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px 1em;
 }
-
+fieldset {
+  padding: 20px;
+  justify-content: flex-start;
+  max-width: 75%;
+}
 }

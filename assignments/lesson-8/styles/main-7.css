@@ -266,7 +266,7 @@ footer>p {} /* This structure refers to p elements that are direct children of t
 
 form{
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
   justify-content: center;  
 
 }
@@ -280,6 +280,7 @@ fieldset {
   border: 1px solid #352e26;
   border-radius: 5px;
   background-color: #edecda;
+  margin-bottom: 5px;
 }
 
 
@@ -329,6 +330,14 @@ button.submit {
   border-radius: 5px;
   border: 1px solid #352e26;
 
+}
+
+fieldset h2{
+  border-bottom: 2px solid #352e26;
+  background-color: #352e26;
+  color: #edecda;
+  padding: 2px 0px 2px 5px;
+  border-radius: 5px;
 }
 
 
