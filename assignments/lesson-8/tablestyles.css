@@ -13,6 +13,13 @@ td {
    
 }
 
+table {
+    /* box-shadow: 1px 4px 8px 1px rgba(127, 185, 194, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    box-shadow: 8px 8px 12px #628ca6;
+}
+
+
+
 thead {
     background-color: #7fb9c2;
     font-size: 1.3em;
@@ -48,4 +55,13 @@ tfoot {
     background-color: #7fb9c2;
    
 
+}
+
+section {
+    display: inline-flex;
+    background-color: white;
+    border: 1px solid gray;
+    padding: 20px;
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+    box-shadow: 3px 3px 10px olive;
 }
