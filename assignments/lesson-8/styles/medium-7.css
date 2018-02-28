@@ -1,0 +1,94 @@
+@media only screen and (min-width: 37.5em) {
+  /* Only CSS rules that need to be changed to meet the layout needs from small to medium go in here */
+  body {
+    max-width: 600px;
+  }
+  
+  nav button { display: none; }  /* hamburger button does not need to be shown */
+  
+  section.forecast { display: block; 
+  
+  
+  }  /* show the 10-day forecast with the medium view and up */
+
+  section.forecast table {
+   
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  article .town-article {
+  
+ 
+  }
+  
+  article p.town-article img { 
+    width: 62.666%;  
+    height: auto;
+    float:right;
+   
+
+  }  /* responsive images */
+
+
+
+nav {
+ 
+  background-color: #6fa69c; 
+  color: #352e26;
+  padding: 0px;
+
+}
+/* copy paste */
+nav ul {
+  
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  
+}
+
+nav li {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  padding: 0px;
+  margin: 0px; 
+ 
+    
+  
+}
+
+nav li a {
+  color:#352e26;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.2em;
+  
+}
+
+
+nav li.active a {
+  color: #352e26;
+  background-color:#edecda;
+
+
+}
+
+nav li a:hover {
+  background-color: #f7d58d;
+  color: #352e26;
+
+}
+
+nav ul.hide {
+  display: block;
+}
+.gallery{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px 1em;
+}
+
+}

@@ -1,0 +1,405 @@
+/* This main css file contains the default rules and is geared toward the small/phone view */
+
+* { box-sizing: border-box;}  /* This wildcard applies to all elements ensuring a box layout model */
+
+body {
+  font-size: 16px;
+  /* Declare the base font-family - from google font api or other */
+  font-family: Raleway, Arial, sans-serif;
+}
+
+
+
+header, nav, main, footer { /* the comma means apply the following CSS declarations to all of the listed elements */
+  /* Declare the maximum width and other main element rules to limit the stretch on wide views */
+
+  
+}
+img {
+  max-width: 100%;
+  height: auto;
+  overflow: auto;
+}
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  background-color: #352e26;
+  padding: 10px;
+  overflow: hidden;
+ 
+
+}
+header .logo {  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;  
+  
+}
+
+  header .title {
+    width: auto;
+    
+
+  }
+header h1 {
+  color: #edecda;
+  
+
+}
+
+
+
+header .subheading {
+  color: #edecda;
+ 
+ 
+  
+}
+
+
+nav button {
+
+  font-size: 3em;
+}
+
+nav ul.hide {
+  display: none;
+}
+
+
+
+h1, h2, h3, p {
+  display: block;
+  overflow: auto;
+  
+}
+h3 {
+  background-color: #352e26;
+  color: #edecda;
+  padding: 10px;
+  font-size: 1.2em;
+  letter-spacing: .1em;
+
+}
+
+main {
+  padding: 30px;
+  
+  margin: 5px;
+
+}
+main h2 {
+  font-weight: bold;
+
+}
+
+
+
+main figure { 
+  
+  width: 100%; 
+  
+  margin: 0px;
+}
+
+
+main figure.myphoto {
+  width: 100%;
+
+}
+main figure.myphoto img {
+  width: 100%;
+}
+
+main section figure {
+  width: 50%
+
+}
+
+
+main section figure img { 
+  width: 100%; 
+
+
+}
+
+
+
+ /*.current h2 {
+  margin: 0px;
+}*/
+
+main .wrapweather {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+ 
+ }
+
+ main .weather {
+  
+  min-width: 30%;
+  max-width: 48%;
+  display: flex;
+  flex-flow: row wrap; 
+  justify-content: center;
+  text-align: center;
+ font-size: 1em;
+}
+
+ main .highlow {
+  display: flex;
+  vertical-align: top;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+width: 50%;
+  margin: 5px;
+ 
+
+ 
+}
+
+main .current {
+  display: flex;
+  vertical-align: top;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 5px;
+ 
+ width: 50%;
+}
+
+main .conditions {
+  display: flex;
+flex-flow: row wrap;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+  margin: 5px;
+  
+  width: 100%;
+}
+
+
+main .townphoto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  
+
+  
+}
+
+.conditions p {
+  margin: 5px;
+}
+
+.highlow p{
+  margin: 5px;
+
+}
+
+
+
+
+
+
+table {
+  border-collapse: collapse;
+}
+thead {
+  background-color: #edecda;
+  
+}
+
+
+td, th {
+  border: 1px solid #352e26;
+  padding: 3px;
+}
+
+picture{
+  width: 50%;
+  height: auto;
+}
+
+
+section {
+  
+}
+
+
+
+article p.town-article img {  /* This structure refers to img elements that are the posterity 
+  of paragraph elements within artcle elements */
+  width: 100%; /* fill the page in the small/phone view */
+  margin: auto; 
+  float:right; 
+
+}
+
+
+
+footer {
+
+  background-color: #d8d9de;
+  color: #352e26;
+  padding: 20px;
+  text-align: center; 
+  font-size: .7em;
+  clear: right;
+
+}
+footer aside {}
+footer>p {} /* This structure refers to p elements that are direct children of the footer element */
+
+/* Other Class Selectors */
+
+
+form{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;  
+
+}
+
+fieldset {
+  display: flex;  
+  border: none;
+  flex-basis: 200px;
+  flex-shrink: 3;
+  flex-grow: 2;
+  border: 1px solid #352e26;
+  border-radius: 5px;
+  background-color: #edecda;
+}
+
+
+
+label {
+  padding-top: 10px; 
+  font-weight: bold;
+  font-size: 1.2em;
+ color: #352e26;
+  
+}
+
+input, textarea, select, .radio-button {
+  /*order: 2;
+  flex: 1 1 auto;*/
+
+  margin-bottom: 10px;
+  
+}
+
+input {
+  width: 100%;
+}
+
+select {
+  width: 100%
+ 
+}
+
+textarea {
+  width: 100%;
+}
+
+.radio-button input {
+  width: auto;
+}
+
+.radio-button p {
+ font-weight: bold;
+
+
+}
+
+button.submit {
+  background-color: #6fa69c;
+  font-size: 2em;
+  border-radius: 5px;
+  border: 1px solid #352e26;
+
+}
+
+
+
+@media only screen and (max-width: 37.5em) {
+.forecast {
+  display:none;
+}
+
+nav{
+  padding: 0px;
+  margin:0px;
+
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #6fa69c;
+  
+  
+}
+
+nav li{
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 1.5em;
+  border: 1px solid #352e26;
+
+}
+  
+nav ul li a {
+  display: flex;
+  color: #352e26;
+  padding: 10px;
+  text-decoration: none;
+  
+  
+
+}
+
+
+nav ul li.active a {
+  background-color: #edecda;
+  
+
+}
+
+nav ul li a:hover {
+  background-color: #f7d58d;
+  
+
+}
+
+.gallery{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px 1em;
+}
+
+form {
+  justify-content: flex-start;
+}
+fieldset{
+  width: 100%;
+}
+
+input {
+  width: 100%;
+}
+
+}
