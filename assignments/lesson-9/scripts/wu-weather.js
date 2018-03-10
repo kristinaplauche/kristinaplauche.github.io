@@ -1,4 +1,4 @@
-var requestURL = 'http://api.wunderground.com/api/cdf3f3537bf94c1c/conditions/q/MN/Franklin.json';
+var requestURL = 'https://api.wunderground.com/api/cdf3f3537bf94c1c/conditions/q/MN/Franklin.json';
 var request = new XMLHttpRequest();
 request.open('GET', requestURL, true);
 request.send();
@@ -13,7 +13,7 @@ request.onload = function () {
 }
 
 var forecast = new XMLHttpRequest();
-forecast.open('GET', 'http://api.wunderground.com/api/cdf3f3537bf94c1c/forecast/q/MN/Franklin.json', true);
+forecast.open('GET', 'https://api.wunderground.com/api/cdf3f3537bf94c1c/forecast/q/MN/Franklin.json', true);
 forecast.send();
 forecast.onload = function () {
     var franklinForecast = JSON.parse(forecast.responseText);
