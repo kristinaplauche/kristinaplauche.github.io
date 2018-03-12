@@ -10,6 +10,10 @@ request.onload = function () {
     document.getElementById('windchill').innerHTML = franklinWeather.current_observation.windchill_f;
     document.getElementById('imageIcon').src = franklinWeather.current_observation.icon_url;
 
+    var str = document.getElementById("imageIcon").innerHTML;
+    var rep = str.replace("http:", "https:");
+    document.getElementById("imageIcon").innerHTML = rep;
+
 
 }
 
