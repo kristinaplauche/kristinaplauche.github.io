@@ -8,7 +8,8 @@ request.onload = function () {
     document.getElementById('currentTemp').innerHTML = franklinWeather.current_observation.temp_f;
     document.getElementById('windBox').innerHTML = franklinWeather.current_observation.wind_mph;
     document.getElementById('windchill').innerHTML = franklinWeather.current_observation.windchill_f;
-    parseFloat(document.getElementById('imageIcon').innerHTML = "<img src=\"" + franklinWeather.current_observation.icon_url + "\">");
+    document.getElementById('imageIcon').src = franklinWeather.current_observation.icon_url;
+
 
 }
 
