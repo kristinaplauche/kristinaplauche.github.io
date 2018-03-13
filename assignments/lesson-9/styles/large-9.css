@@ -62,6 +62,7 @@
     border-radius: 3px;
     padding: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
   }
 
   .town-sections {
@@ -76,6 +77,8 @@
     border: 1px solid #352e26;
     border-radius: 3px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: #352e26;
+    background-color: #edecda;
   }
   .town-sections section {
     
@@ -112,5 +115,31 @@
     
      
    }
+   main .wrapweather {
+   
+   }
+   main .townphoto {
+    /*display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;*/
+   width: auto;
+   padding: 0px;
+   margin: 0px; 
+       
+  }
+  main .townphoto img {
+    /*display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;*/
+   width: 100%;
+   height: auto;
+   justify-content: center;
+   padding-left: 10px;
+   margin: 0px; 
+   
+    
+  }
 
 }
