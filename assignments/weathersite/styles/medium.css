@@ -1,0 +1,157 @@
+@media only screen and (min-width: 37.5em) {
+  /* Only CSS rules that need to be changed to meet the layout needs from small to medium go in here */
+  body {
+    max-width: 600px;
+  }
+  
+  nav button { display: none; }  /* hamburger button does not need to be shown */
+  
+  section.forecast { display: block; 
+  
+  
+  }  /* show the 10-day forecast with the medium view and up */
+
+  section.forecast table {
+   
+    margin-left: 10px;;
+    
+  }
+
+  article .town-article {
+  
+ 
+  }
+  
+  article p.town-article img { 
+    width: 62.666%;  
+    height: auto;
+    float:right;
+    padding-bottom: 10px;
+   
+
+  }  /* responsive images */
+
+
+
+nav {
+ 
+  background-color: #6fa69c; 
+  color: #352e26;
+  padding: 0px;
+
+}
+/* copy paste */
+nav ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start; 
+  padding: 0;
+  margin: 0;
+  
+  
+}
+
+nav li {
+  display: inline-block;
+  list-style-type: none;  
+  padding: 10px;
+  margin-right: -5px; 
+ 
+    
+  
+}
+
+nav li a {
+  color:#352e26;
+  text-decoration: none;
+  font-size: 1.2em;
+  
+}
+
+
+nav li.active {
+  color: #352e26;
+  background-color:#f7d58d;
+
+
+}
+
+nav li:hover {
+  background-color: #edecda;
+  color: #352e26;
+
+}
+
+nav ul.hide {
+  display: block;
+}
+.gallery{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px 1em;
+}
+fieldset {
+  padding: 20px;
+  justify-content: flex-start;
+  max-width: 75%;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+.town-sections {
+  display: block;
+  
+}
+.town-sections h1 {
+  border-bottom: 5px solid #6fa69c;
+  padding-bottom: 10px;
+}
+
+.town-sections div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px 1em;
+  margin-bottom: 20px;
+
+}
+
+
+.town-sections section {
+  text-align: left; 
+
+}
+.town-sections section p, h1, h2{
+  padding-left: 10px; 
+
+}
+
+.town-sections figure {
+  width: auto;
+  height: auto;
+}
+
+
+.town-sections section.content {
+  border: 2px solid #352e26;  
+  color: #352e26; 
+  
+}
+
+.town-sections div section.a {
+  grid-row: 1;
+  grid-column:2;
+  border: 2px solid #352e26;
+  border-radius: 3px;
+  color: #352e26;
+ 
+ 
+  
+}
+.town-sections div section.b {
+  grid-row: 1;
+  grid-column: 1;
+  
+   
+ }
+
+}

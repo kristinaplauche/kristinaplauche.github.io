@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Storm Report</title>
+    <meta name="author" content="Kristina Plauché">
+    <meta name="description" content="Report storms in your area.">
+    <!-- external style references in the proper cascading order -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <!-- Google API font reference -->
+    <link href="styles/normalize.css" rel="stylesheet">
+    <!-- normalize useragent/browser defaults -->
+    <link href="styles/main.css" rel="stylesheet">
+    <!-- default styles - small/phone views -->
+    <link href="styles/medium.css" rel="stylesheet">
+    <!-- medium/tablet views -->
+    <link href="styles/large.css" rel="stylesheet">
+    <!-- large/wide/desktop views -->
+    <!-- <link href="styles/normalize.css" rel="stylesheet"> -->
+    <!-- normalize css file -->
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/aqua-logo-small.png" alt="The site logo" width="120">
+        </div>
+        <div class="title">
+            <h1>The Weather Vane</h1>
+            <div class="subheading">So you knows how the wind blows.</div>
+        </div>
+
+    </header>
+
+    <!-- site navigation use placeholder references -->
+    <nav>
+        <button onclick="toggleNavMenu()">&#9776;</button>
+        <ul id="primaryNav" class="hide">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="franklin.html">Franklin</a>
+            </li>
+            <li>
+                <a href="greenville.html">Greenville</a>
+            </li>
+            <li>
+                <a href="springfield.html">Springfield</a>
+            </li>
+            <li class="active">
+                <a href="stormcenter.html">Storm Center</a>
+            </li>
+            <li>
+                <a href="gallery.html">Gallery</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="thank-you">
+        <img src="https://media.giphy.com/media/l3q2FnW3yZRJVZH2g/giphy.gif" alt="thank-you">
+        <p>Thank you for submitting this form!</p>
+    </main>
+
+    <footer>
+        <aside>
+            The Weather Vane | 123 Sunny Street | Stormy, CA 90210
+        </aside>
+        <p class="footer-bar">&copy;2017 All Rights Reserved | The Weather Vane |
+            <span id="currentdate">Current Date Placeholder</span>
+        </p>
+    </footer>
+
+    <script src="scripts/hamburger.js "></script>
+    <script src="scripts/currentdate.js "></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+@media only screen and (min-width: 64em) {
+  /* Only CSS rules that need to be changed to meet the layout needs from medium to large/wide go in here */
+  body {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  article p.town-article img { 
+    width: 29.333%; 
+    height: auto;
+    padding-bottom: 10px;
+   
+  }
+
+  .wrapweather {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 1em;
+    font-size: 1.2em;
+    line-height: 1.2em;
+   
+   }
+
+  .gallery{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px 1em;
+  }
+  .gallery figure:hover {
+    border: 1px solid #352e26;
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  figure {
+    padding-top: 20px;
+   
+  
+  }
+  figcaption {
+    
+    
+  }
+ 
+  fieldset {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 5px;
+
+  }
+  .weather-story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px 1em;
+   
+  }
+  
+  .weather-story section {
+ margin-bottom: 20px;
+ 
+  }
+  
+  .weather-story section figure {
+    padding: 0px;
+    width: auto;
+    height: auto;
+    
+  }
+  .weather-story section.story-content {
+    /*border: 1px solid #352e26;
+    border-radius: 3px;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+  
+  }
+
+  .town-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px 1em;
+  
+  }
+
+  .town-sections div {
+    display: block;
+    border: 2px solid #352e26;
+    
+   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #edecda;*/
+    color: #352e26;
+    
+   
+  }
+  .town-sections section {
+    
+    
+  }
+  .town-sections figure {
+    width:auto;
+    height:auto;
+    margin: 0px;
+    padding: 10px;
+  }
+  .town-sections section.content {
+    border: 0px;
+    border-radius: 0;
+    padding: 5px;
+   /* box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 1);*/
+    
+  }
+  
+  
+
+  .town-sections div section.a {
+    border: 0px;
+    border-radius: 0px;
+   /* box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 1);*/
+    padding: 5px;
+   
+    
+  }
+  .town-sections div section.b {
+    border: 0;
+    border-radius: 0px;
+    box-shadow: 0px 0px;
+    
+     
+   }
+   main .wrapweather {
+   
+   }
+   main .townphoto {
+    /*display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;*/
+   width: auto;
+   padding: 0px;
+   margin: 0px; 
+       
+  }
+  main .townphoto img {
+    /*display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;*/
+   width: 100%;
+   height: auto;
+   justify-content: center;
+   padding-left: 10px;
+   margin: 0px; 
+   
+    
+  }
+
+}
