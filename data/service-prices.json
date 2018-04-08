@@ -2,19 +2,19 @@
     "services": [
         {
             "name": "Tune Up",
-            "price": "50"
+            "price": "$50"
         },
         {
             "name": "Flat Tire Repair",
-            "price": "10"
+            "price": "$10"
         },
         {
             "name": "Chain Repair",
-            "price": "30"
+            "price": "$30"
         },
         {
             "name": "True Rims",
-            "price": "75"
+            "price": "$75"
         }
     ]
 }
