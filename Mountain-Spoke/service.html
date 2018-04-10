@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Service & Repairs | Servings bikes both old and new for 50 years.</title>
+    <meta name="author" content="Kristina Plauché">
+    <meta name="description" content="Keep up with the weather in your town at the Weather Vane.">
+    <!-- external style references in the proper cascading order -->
+    <link href="https://fonts.googleapis.com/css?family=Freckle+Face" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <!-- Google API font reference -->
+    <link href="styles/normalize.css" rel="stylesheet">
+    <!-- normalize useragent/browser defaults -->
+    <link href="styles/main.css" rel="stylesheet">
+    <!-- default styles - all screen sizes -->
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/mountain-spoke-logo.png" alt="The site logo" width="120">
+        </div>
+        <div class="title">
+            <h1>The Mountain
+                <span class="spoke">Spoke</span>
+            </h1>
+            <div class="subheading">Bozeman Bike Tours, Sales & Service</div>
+        </div>
+
+    </header>
+
+    <!-- site navigation -->
+    <nav>
+        <button onclick="toggleNavMenu()">&#9776;</button>
+        <ul id="primaryNav" class="hide">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="tours.html">Tours</a>
+            </li>
+            <li>
+                <a href="events.html">Events</a>
+            </li>
+            <li>
+                <a href="sales.html">Sales</a>
+            </li>
+            <li class="active">
+                <a href="service.html">Service</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Repair & Maintenance Services</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Service</th>
+                    <th>Price*</th>
+                </tr>
+                <tr>
+                    <td>Tune Up</td>
+                    <td id="tune-up"></td>
+
+                </tr>
+                <tr>
+                    <td>Flat Tire Repair</td>
+                    <td id="tire"></td>
+
+                </tr>
+                <tr>
+                    <td>Chain Repair</td>
+                    <td id="chain"></td>
+
+                </tr>
+                <tr>
+                    <td>True Rims</td>
+                    <td id="rim"></td>
+
+                </tr>
+
+            </tbody>
+            <tfoot>
+                <tr>
+
+                    <td colspan="2">*Prices subject to change.</td>
+                </tr>
+            </tfoot>
+        </table>
+
+
+
+    </main>
+
+    <footer>
+        <aside>
+            The Mountain Spoke | 3950 Valley Commons Drive | Bozeman, MT |
+            <a href="https://www.wunderground.com/weather/us/mt/bozeman">Today's Weather</a>
+        </aside>
+        <p class="footer-bar">&copy;2018 All Rights Reserved | Site author: Kristina Plauché |
+            <span id="currentdate">Current Date Placeholder</span> |
+            <a href="/video.html">Video presentation</a>
+        </p>
+    </footer>
+
+    <script src="scripts/hamburger.js "></script>
+    <script src="scripts/currentdate.js "></script>
+    <script src="scripts/repair-prices.js "></script>
+
+
+
+
+
+</body>
+
+
+</html>

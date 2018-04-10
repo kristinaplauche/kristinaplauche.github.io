@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Events | Cycle the Great Mountain Divide</title>
+    <meta name="author" content="Kristina Plauché">
+    <meta name="description" content="Keep up with the weather in your town at the Weather Vane.">
+    <!-- external style references in the proper cascading order -->
+    <link href="https://fonts.googleapis.com/css?family=Freckle+Face" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <!-- Google API font reference -->
+    <link href="styles/normalize.css" rel="stylesheet">
+    <!-- normalize useragent/browser defaults -->
+    <link href="styles/main.css" rel="stylesheet">
+    <!-- default styles - all screen sizes -->
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/mountain-spoke-logo.png" alt="The site logo" width="120">
+        </div>
+        <div class="title">
+            <h1>The Mountain
+                <span class="spoke">Spoke</span>
+            </h1>
+            <div class="subheading">Bozeman Bike Tours, Sales & Service</div>
+        </div>
+
+    </header>
+
+    <!-- site navigation -->
+    <nav>
+        <button onclick="toggleNavMenu()">&#9776;</button>
+        <ul id="primaryNav" class="hide">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="tours.html">Tours</a>
+            </li>
+            <li class="active">
+                <a href="events.html">Events</a>
+            </li>
+            <li>
+                <a href="sales.html">Sales</a>
+            </li>
+            <li>
+                <a href="service.html">Service</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <div class=home-wrap>
+            <section class="annual-event">
+                <h1>Cycle the Continental Divide</h1>
+                <h4>Our Premier Annual Event</h4>
+                <ul>
+                    <li>
+                        <strong>Dates: </strong>June 14-16, 2018
+                    </li>
+                    <li>
+                        <strong>Route: </strong> Follow the Continental Divide of the Americas along the Rocky Mountains and traverses
+                        five U.S. states — Montana, Idaho, Wyoming, Colorado, and New Mexico. In Montana it crosses Triple
+                        Divide Pass near Triple Divide Peak which separates the Hudson Bay, Atlantic Ocean and Pacific Ocean
+                        watersheds.
+                    </li>
+                    <li>
+                        <strong>Cost: </strong>$200.00 USD</li>
+                    <li>
+                        <strong>Requirements: </strong> Mountain bike, hydration, food, gear, clothing, & pre-event health check.
+                        The Mountain Spoke manages accommodations so you can get a good night's rest after a long day of
+                        biking and taking in the beautiful scenery.
+                    </li>
+                </ul>
+                <figure>
+                    <img src="images/bike-vista.jpg" alt="single biker overlooking valley">
+                </figure>
+            </section>
+            <form class="register">
+
+                <fieldset>
+                    <h1>Register Now!</h1>
+                    <p>We look forward to hearing from you!</p>
+                    <div class="half1">
+                        <label>Full Name</label>
+                    </div>
+                    <div class="half2">
+                        <input type="text" name="full-name" required pattern="[a-zA-Z ]+" minlength="5">
+                    </div>
+                    <div>
+                        <label>Phone</label>
+                    </div>
+                    <div>
+                        <input type="tel" name="phone" required>
+                    </div>
+                    <div>
+                        <label>Email</label>
+                    </div>
+                    <div>
+                        <input type="email" name="email" placeholder="name@example.com" required>
+                    </div>
+                    <div>
+                        <label>Date of Birth</label>
+                    </div>
+                    <div>
+                        <input type="date" name="dob">
+                    </div>
+                    <div>
+                        <label>State</label>
+                    </div>
+                    <div>
+                        <select id="state" name="state">
+                            <option value="---">---</option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="District of Columbia">District of Columbia</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Guam">Guam</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Idaho">Idaho</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Iowa">Iowa</option>
+                            <option value="Kansas">Kansas</option>
+                            <option value="Kentucky">Kentucky</option>
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Massachusetts">Massachusetts</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Montana">Montana</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="New Hampshire">New Hampshire</option>
+                            <option value="New Jersey">New Jersey</option>
+                            <option value="New Mexico">New Mexico</option>
+                            <option value="New York">New York</option>
+                            <option value="North Carolina">North Carolina</option>
+                            <option value="North Dakota">North Dakota</option>
+                            <option value="Northern Marianas Islands">Northern Marianas Islands</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option>
+                            <option value="Oregon">Oregon</option>
+                            <option value="Pennsylvania">Pennsylvania</option>
+                            <option value="Puerto Rico">Puerto Rico</option>
+                            <option value="Rhode Island">Rhode Island</option>
+                            <option value="South Carolina">South Carolina</option>
+                            <option value="South Dakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Vermont">Vermont</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Virgin Islands">Virgin Islands</option>
+                            <option value="Washington">Washington</option>
+                            <option value="West Virginia">West Virginia</option>
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="Wyoming">Wyoming</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Country</label>
+                    </div>
+                    <div>
+                        <select id="Country" name="country">
+                            <option value="ch">USA</option>
+                            <option value="fr">Canada</option>
+                            <option value="de">Mexico</option>
+                            <option value="nl">Europe</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Special Accommodations or Comments</label>
+                    </div>
+                    <div>
+                        <textarea name="comments"></textarea>
+                    </div>
+                    <div>
+                        <button class="submit" type="submit" formaction="thank-you.html">Submit</button>
+                    </div>
+
+                </fieldset>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <aside>
+            The Mountain Spoke | 3950 Valley Commons Drive | Bozeman, MT |
+            <a href="https://www.wunderground.com/weather/us/mt/bozeman">Today's Weather</a>
+        </aside>
+        <p class="footer-bar">&copy;2018 All Rights Reserved | Site author: Kristina Plauché |
+            <span id="currentdate">Current Date Placeholder</span> |
+            <a href="/video.html">Video presentation</a>
+        </p>
+    </footer>
+
+    <script src="scripts/hamburger.js "></script>
+    <script src="scripts/currentdate.js "></script>
+
+
+
+
+
+</body>
+
+
+</html>
