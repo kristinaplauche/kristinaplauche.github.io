@@ -1,23 +1,33 @@
 /* CIT 230 - Assignment Portal CSS Template */
+
 /* You may use #HEX or color names */
 
 /* * is a wildcard referring to all elements. */
-* { margin: 0; box-sizing: border-box; } 
 
-body { 
-    font-size: 16px; 
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
     line-height: 32px;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif/* Ubuntu, sans-serif */;
-    color: black /* #xxxxxx */;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif/* Ubuntu, sans-serif */
+    ;
+    color: black/* #xxxxxx */
+    ;
 }
 
 h1 {
-    font-size: 32px /* x.xrem  (rem is a unit of measure) */;
-    color: whitesmoke/* #xxxxxx */;
+    font-size: 32px/* x.xrem  (rem is a unit of measure) */
+    ;
+    color: whitesmoke/* #xxxxxx */
+    ;
 }
 
 h2 {
-    font-size: 24px/* x.xrem */;
+    font-size: 24px/* x.xrem */
+    ;
     text-align: center;
     border-bottom: 1px solid #bbb;
 }
@@ -25,12 +35,13 @@ h2 {
 header, main, footer {
     margin: 1.25rem auto;
     padding: .5rem;
-    max-width: 700px/* xxxpx (px = pixel is a unit of measure)  */;
+    max-width: 700px/* xxxpx (px = pixel is a unit of measure)  */
+    ;
 }
 
 header, footer, footer a {
     text-align: center;
-    background-color: rgb(16, 98, 192) ;
+    background-color: rgb(16, 98, 192);
     color: whitesmoke;
 }
 
@@ -39,11 +50,14 @@ header img {
     height: auto;
     float: right;
 }
+
 nav {
     margin: 1.25rem auto;
     padding: .5rem;
-    max-width: 700px/* xxxpx (px = pixel is a unit of measure)  */;
+    max-width: 700px/* xxxpx (px = pixel is a unit of measure)  */
+    ;
 }
+
 .style1 {
     margin: 0 auto;
     border: 1px solid #bbb;

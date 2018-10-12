@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Fluency</title>
+
+    Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays
+
+    <script type="text/javascript">
+        /* Input: 
+         * Processing: 
+         * Output: 
+         */
+        function coolThing() {
+            // Read something from the user.
+            var text = document.getElementById('theInputBox').value;
+
+            // Convert what the user typed from text into a number.
+            var thingOne = parseFloat(text);
+
+            // Convert thingOne into thingTwo.
+            var thingTwo = thingOne * 0.94635295;
+
+            // Display the amount of thingTwo to the user.
+            document.getElementById('outputDiv').innerHTML = thingTwo;
+        }
+    </script>
+</head>
+
+<body>                               Enter something:
+    <input type="text" id="theInputBox">
+    <button type="button" onclick="coolThing()">Click</button>
+    <div id="outputDiv"></div>
+</body>
+
+</html>

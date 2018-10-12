@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Fluency | Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</title>
+    <meta name="description" content="cs-261-home-page ">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+
+</head>
+
+<body>
+    <main>
+        <div class="wrapper">
+            <h1>Loops</h1>
+            <div class="topic fluency">
+                <h2>The For Loop</h2>
+                <h3>Five Times Table From 1 - 12.</h3>
+                <p>Press the button to display the table.</p>
+                <button type="button" onclick="fiveTimesTable()" class="btn-success">Times Table</button>
+                <div id="timesTable"></div>
+                <hr>
+
+                <h2>The For In Loop</h2>
+                <p> The For/In statement loops through the properties of an object. To demonstrate I made an object for running
+                    gear I need for a race.</p>
+                <button type="button" onclick="gearList()" class="btn-success">Show List</button>
+                <div id="gear"></div>
+
+                <hr>
+                <h2>The While Loop</h2>
+                <p>A while loop runs through a block of code as long as a specified condition is true.</p>
+                <p>In this code, the loop runs as long as the (i) variable is less than 12. To demonstrate, I had it print out
+                    the 7 times tables.</p>
+
+                <button type="button" onclick="countDown()" class="btn-success">Run</button>
+
+                <div id="timesWhile"></div>
+
+
+                <!--  <div id="close">
+                <div id="timesWhile"></div>
+                <a onclick="closeDiv()">
+                    Close</a>
+            </div> -->
+
+                <hr>
+
+                <h2>The Do While Loop</h2>
+                <p> A do/while loop will always execute at least one time. The first part of the code block is executed before
+                    the condition is tested.</p>
+                <button type="button" onclick="showKids()" class="btn-success">Show</button>
+
+                <div id="showKids"></div>
+
+            </div>
+        </div>
+        <!-- ###### BREAK ##### -->
+        <div class="wrapper">
+            <h1>Conditional Statements</h1>
+            <p>In another class, I made a
+                <a href="https://www.youtube.com/watch?v=i7LOET1sGLg"> video about php conditionals</a>
+                , but it also helps me keep the JavaScript logic straight.</p>
+            <p>
+                <a href="https://www.w3schools.com/jsref/jsref_if.asp">W3 Schools helped with definitions here.</a>
+            </p>
+            <div class="topic fluency">
+                <h2>if, else, else if</h2>
+                <ul>
+                    <li>"if" will execute a block of code if the condition is true</li>
+                    <li>"else" will execute that same block of code if the condition is false</li>
+                    <li>"else if" will specify a new condition if the first condition is false</li>
+                </ul>
+
+
+                <h3>These conditional statements are often used together, so I am using a block of code that uses all 3.
+                </h3>
+                <p>
+                    <strong> If</strong> the time of day is less than 10:00, you will see a morning greeting.
+                    <strong>else if</strong> the time is less than 20:00 (but more than 10:00) you will see a day time greeting.
+                    <strong>else</strong> if none of either of those are true you will see an evening greeting in the block below.
+                </p>
+                <button type="button" onclick="timeGreeting()" class="btn-success">Hi there!</button>
+
+                <h3 id="hiTime"></h3>
+
+
+
+                <hr>
+                <h2>switch</h2>
+                <p>"switch" will select one of many blocks of code to execute</p>
+
+                <label>What type of shoes should I wear if the weather is:</label>
+                <select id="myInput">
+                    <option value="" selected>Please select</option>
+                    <option value="hot">hot</option>
+                    <option value="rainy">rainy</option>
+                    <option value="snowy">snowy</option>
+                </select>
+
+                <button type=" button" onclick="checkWeather() " class="btn-success ">Show</button>
+
+                <div id="weatherShoes"></div>
+
+            </div>
+        </div>
+
+        <!-- ###### BREAK ##### -->
+        <div class="wrapper">
+            <h1>Functions, Variables, & Parameters</h1>
+            <div class="topic fluency ">
+                <h2>Functions</h2>
+                <p>A JavaScript function performs a specific task. It must be called by something in order to execute. </p>
+                All of the above examples use functions, but none of them yet use a return statement & parameters.
+
+                <h2>Variables</h2>
+                <p>>JavaScript variables are simply containers for storing values. It's like algebra variables. But JavaScript
+                    variables can hold more than just numbers. They can hold arrays (which are basically lists), objects
+                    (sort of like a categorized list), text, formulas, etc... They are an essential building block of JavaScript.</p>
+
+                <h2>Parameters</h2>
+                <p> Parameters are a little trickier to understand. You'll hear developers talking about parameters and arguments
+                    almost interchangeably, but they aren't quite the same thing.</p>
+                <ul>
+                    <li>
+                        <strong>Parameters</strong> are the names listed in the function definition. It looks like this:
+                        <code>
+                            function (parameter1, parameter2, parameter3) {
+
+                            }
+                            </code>
+                    </li>
+                    <li>
+                        <strong>Arguments</strong> are the real values passed to (and received by) the function. The 4 & 3 in the
+                        image below are the arguments. A & B are the parameters.
+                        <figure class="code">
+                            <img src="images/arguments.png"> </figure>
+                    </li>
+                </ul>
+                <p>To see all of these elements in action let's determine if a number is even.</p>
+                <label>Please enter an integer:</label>
+                <input type="number" id="numberInputBox">
+
+                <button type="button" onclick="evenOdd()">Check</button>
+                <div id="evenOdd"></div>
+
+
+            </div>
+        </div>
+
+
+        <!-- ###### BREAK ##### -->
+        <div class="wrapper">
+            <h1>Arrays & Associative Arrays</h1>
+            <div class="topic fluency ">
+                <h2>Arrays</h2>
+                I think of arrays as lists. An array allows you to store multiple values in a single value. I used an array when I listed
+                my children's names in the do while loop. Here is a simpler version:
+                <button type="button" onclick="showKidNames()" class="btn-success">See my kids' names</button>
+
+                <div id="showKidNames"></div>
+
+                <hr>
+                <h2>Associative Arrays</h2>
+                <p>According to W3 schools, JavaScript does not support associative arrays which means it doesn't support arrays
+                    with named indexes. If you use a named index, JavaScript will treat that as an object. JavaScript arrays
+                    use numbered indexes. That is how I was able to loop through the list of my kids names as in the example
+                    above.
+
+                </p>
+
+            </div>
+        </div>
+
+
+
+
+    </main>
+</body>
+<script src="scripts/javascript.js "></script>
+
+</html>

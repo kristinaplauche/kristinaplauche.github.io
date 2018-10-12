@@ -1,0 +1,144 @@
+/* CIT 230 - Assignment Portal CSS Template */
+
+/* You may use #HEX or color names */
+
+/* * is a wildcard referring to all elements. */
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    line-height: 32px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif/* Ubuntu, sans-serif */
+    ;
+    color: black/* #xxxxxx */
+    ;
+}
+
+.right-image {
+    width: 150px;
+    height: auto;
+    float: right;
+}
+
+.right-image img {
+    width: 100%;
+    height: auto;
+}
+
+.topic {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin-bottom: 2%;
+    padding: 2%;
+}
+
+.topic h2 {
+    text-align: left;
+}
+
+.wrapper {
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.wrapper h1 {
+    display: block;
+    background-color: lightsalmon;
+    padding: 1%;
+    color: black;
+    border-radius: 5px;
+}
+
+.fluency h2 {
+    display: block;
+    background-color: paleturquoise;
+    border-radius: 5px;
+    padding: .5%;
+}
+
+.btn-success {
+    background-color: lightgray;
+    border-radius: 5px;
+    border: black;
+    padding: 1%;
+    text-align: center;
+    font-weight: bold;
+}
+
+code {
+    background-color: gray;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+figure .code {
+    width: 80%;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+hr {
+    margin: 5px;
+}
+
+.btn-primary {
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    border: black;
+    padding: 1%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px/* x.xrem  (rem is a unit of measure) */
+    ;
+    color: whitesmoke/* #xxxxxx */
+    ;
+}
+
+h2 {
+    font-size: 24px/* x.xrem */
+    ;
+}
+
+header, main, footer {
+    margin: 1.25rem auto;
+    padding: .5rem;
+    max-width: 700px/* xxxpx (px = pixel is a unit of measure)  */
+    ;
+}
+
+header, footer, footer a {
+    text-align: center;
+    background-color: navy;
+    color: whitesmoke;
+}
+
+header img {
+    width: auto;
+    height: auto;
+    float: right;
+}
+
+nav {
+    margin: 1.25rem auto;
+    padding: .5rem;
+    max-width: 700px/* xxxpx (px = pixel is a unit of measure)  */
+    ;
+}
+
+.style1 {
+    margin: 0 auto;
+    border: 1px solid #bbb;
+    padding: 5px;
+    background-color: #eee;
+    line-height: 1.5em;
+}
