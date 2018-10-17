@@ -3,35 +3,72 @@
 
 <head>
     <meta charset="utf-8">
-    <title>JavaScript Fluency</title>
+    <title>JavaScript Objects Fluency | Object Creation Functions, Inheritance, Properties, Methods, Instantiation</title>
 
-    Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays
+    Object Creation Functions, Inheritance, Properties, Methods, Instantiation
 
-    <script type="text/javascript">
-        /* Input: 
-         * Processing: 
-         * Output: 
-         */
-        function coolThing() {
-            // Read something from the user.
-            var text = document.getElementById('theInputBox').value;
-
-            // Convert what the user typed from text into a number.
-            var thingOne = parseFloat(text);
-
-            // Convert thingOne into thingTwo.
-            var thingTwo = thingOne * 0.94635295;
-
-            // Display the amount of thingTwo to the user.
-            document.getElementById('outputDiv').innerHTML = thingTwo;
-        }
-    </script>
 </head>
 
-<body>                               Enter something:
-    <input type="text" id="theInputBox">
-    <button type="button" onclick="coolThing()">Click</button>
-    <div id="outputDiv"></div>
+<body>
+    <main>
+
+        <!--##### Break ######-->
+        <div class="wrapper">
+            <div class="topic fluency">
+                <h2>Properties</h2>
+                <p>A property of an object is the name of the attribute. For example if I had a car object with the make of
+                    Honda,
+                    <strong>car.make</strong> would be the property. </p>
+                <p>Syntax is: </p>
+                <ul>
+                    <li>
+                        objectName.property // car.make
+                    </li>
+                    <li>objectName["property"] // car["make"]</li>
+                    <li>objectName[expression] // x = "make"; car.x</li>
+                </ul>
+            </div>
+        </div>
+
+        <!--##### Break ######-->
+        <div class="wrapper">
+            <div class="topic fluency">
+                <h2>Methods</h2>
+                Methods are when a function is a property of an object. Rather than having an object of Car {"make": Honda}, Honda in this
+                case would be a function()
+
+            </div>
+        </div>
+
+        <!--##### Break ######-->
+        <div class="wrapper">
+            <div class="topic fluency">
+                <h2>Inheritance</h2>
+                <p>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Inheritance">From MDN:</a> All objects in JavaScript inherit from at least one other object. The object being inherited
+                    from is known as the prototype, and the inherited properties can be found in the prototype object of
+                    the constructor</p>
+            </div>
+        </div>
+        <!--##### Break ######-->
+        <div class="wrapper">
+            <div class="topic fluency">
+                <h2>Instantiation</h2>
+                <p> Creating a new object.</p>
+            </div>
+        </div>
+        <!--##### Break ######-->
+        <div class="wrapper">
+            <div class="topic fluency">
+                <h2>Object Creation Functions</h2>
+                <p>Constructor function</p>
+                <p>Object create</p>
+            </div>
+        </div>
+
+        <!--##### END ######-->
+    </main>
 </body>
+<script src="scripts/javascript.js "></script>
 
 </html>

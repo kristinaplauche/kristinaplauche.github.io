@@ -110,16 +110,31 @@ function checkWeather() {
 // function, variables, and parameters fnction.
 
 function evenOdd() {
-    var number = parseInt(document.getElementById('numberInputBox').value);
+    var number = parseFloat(document.getElementById('numberInputBox').value);
     var result = isEven(number);
-    document.getElementById('evenOdd').innerHTML =
-        'Is ' + number + ' even? ' + result;
+    if (isNaN(number)) {
+        document.getElementById('evenOdd').innerHTML = 'Please enter a number';
+    } else if (Number.isInteger(number)) {
+        if (number % 2 == 0) {
+            document.getElementById('evenOdd').innerHTML = number + ' is an even number ';
+        } else { document.getElementById('evenOdd').innerHTML = number + ' is an odd number '; }
+
+    } else {
+        document.getElementById('evenOdd').innerHTML = 'Please enter an integer';
+    }
 }
-// Returns true if value is an even
-// integer; otherwise returns false.
+
 function isEven(value) {
     return (value % 2) == 0;
 }
+//document.getElementById('evenOdd').innerHTML =
+//'Is ' + number + ' even? ' + result;
+//}
+// Returns true if value is an even
+// integer; otherwise returns false.
+//function isEven(value) {
+// return (value % 2) == 0;
+//}
 
 function showKidNames() {
     var kids = ["Joshua", "Devin", "Nicole", "Tyler", "Bryce", "Chase", "Grant", "Aden"];
@@ -132,3 +147,7 @@ function showKidNames() {
     while (i < 8);
     document.getElementById("showKidNames").innerHTML = text;
 }
+
+
+/////###### JAVASCRIPT OBJECTS ###### //////////
+

@@ -63,7 +63,7 @@
                 <a href="https://www.youtube.com/watch?v=i7LOET1sGLg"> video about php conditionals</a>
                 , but it also helps me keep the JavaScript logic straight.</p>
             <p>
-                <a href="https://www.w3schools.com/jsref/jsref_if.asp">W3 Schools helped with definitions here.</a>
+
             </p>
             <div class="topic fluency">
                 <h2>if, else, else if</h2>
@@ -115,7 +115,7 @@
                 All of the above examples use functions, but none of them yet use a return statement & parameters.
 
                 <h2>Variables</h2>
-                <p>>JavaScript variables are simply containers for storing values. It's like algebra variables. But JavaScript
+                <p>JavaScript variables are simply containers for storing values. It's like algebra variables. But JavaScript
                     variables can hold more than just numbers. They can hold arrays (which are basically lists), objects
                     (sort of like a categorized list), text, formulas, etc... They are an essential building block of JavaScript.</p>
 
@@ -163,20 +163,40 @@
 
                 <hr>
                 <h2>Associative Arrays</h2>
-                <p>According to W3 schools, JavaScript does not support associative arrays which means it doesn't support arrays
-                    with named indexes. If you use a named index, JavaScript will treat that as an object. JavaScript arrays
-                    use numbered indexes. That is how I was able to loop through the list of my kids names as in the example
-                    above.
+                <p>According to Mozilla Developer Network, JavaScript does not support associative arrays which means it doesn't
+                    support arrays with named indexes. If you use a named index, JavaScript will treat that as an object.
+                    JavaScript arrays use numbered indexes. That is how I was able to loop through the list of my kids names
+                    as in the example above.
 
                 </p>
 
             </div>
         </div>
 
+        <h1>isNaN() example</h1>
+
+        <script type="text/javascript">
+            var num1 = 100;
+            if (isNaN(num1)) {
+                document.write(num1 + " is not a number <br/>");
+            } else {
+                document.write(num1 + " is a number <br/>");
+            }
+
+            var str1 = "mkyong"
+            if (isNaN(str1)) {
+                document.write(str1 + " is not a number <br/>");
+            } else {
+                document.write(str1 + " is a number <br/>");
+            }
+        </script>
+
+</body>
+
+</html>
 
 
-
-    </main>
+</main>
 </body>
 <script src="scripts/javascript.js "></script>
 
