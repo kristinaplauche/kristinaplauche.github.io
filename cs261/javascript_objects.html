@@ -5,13 +5,39 @@
     <meta charset="utf-8">
     <title>JavaScript Objects Fluency | Object Creation Functions, Inheritance, Properties, Methods, Instantiation</title>
 
-    Object Creation Functions, Inheritance, Properties, Methods, Instantiation
 
+    <meta name="description" content="cs-261 javascript objects code fluency ">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
 
 <body>
     <main>
-
+        <div class="wrapper">
+            <h1>JavaScript Objects</h1>
+            <p>Object Creation Functions, Inheritance, Properties, Methods, & Instantiation</p>
+            <p>
+                The output from these buttons, but this took hours and hours to figure out. I have a much more solid grasp of JavaScript
+                Objects now.</p>
+            <h3>Dimensions of a Cube</h3>
+            <p>I created a simple "Cube" object with properties of length, width, and height. For simplicity, I hard coded the
+                values, but the values could come dynamically through various methods.
+            </p>
+            <button type="button" onclick="writeProp()" class="btn-success">Show Cube Dimensions</button>
+            <div id="writeProp"></div>
+            <h3>Object with Inheritance</h3>
+            <p>I'm calling this a "layered" object, because one of the properties in this object is actually an object inherited
+                from another instance. I wanted to create a function that would display the properties and values of an object
+                dynamically. I used a for loop and a for/in loop to get this to display the way I wanted. Click the button
+                below to see the magic. </p>
+            <button type="button" onclick="writeLayer()" class="btn-success">Show the Layered Object</button>
+            <div id="writeLayer"></div>
+            <hr/>
+            <p>
+                <strong>FYI:</strong> I used console.log a lot for learning purposes. You may want to check it out to see what is
+                there.
+            </p>
+        </div>
         <!--##### Break ######-->
         <div class="wrapper">
             <div class="topic fluency">
@@ -26,6 +52,19 @@
                     </li>
                     <li>objectName["property"] // car["make"]</li>
                     <li>objectName[expression] // x = "make"; car.x</li>
+                    <p>You can think of an object property like a variable that "belongs" to the object. Property names can
+                        be dynamically determined. Dynamic property names needs to use square brackets [].
+                    </p>
+
+                    <div id="myObj"></div>
+                    <h3>Show One property in an Object</h3>
+
+
+                    <div id="showObjects"></div>
+
+
+
+
                 </ul>
             </div>
         </div>
@@ -34,8 +73,20 @@
         <div class="wrapper">
             <div class="topic fluency">
                 <h2>Methods</h2>
-                Methods are when a function is a property of an object. Rather than having an object of Car {"make": Honda}, Honda in this
-                case would be a function()
+                <p>Methods are when a function is a property of an object. Rather than having an object of Character {"first
+                    name": "Mama", "last name": "Bear","full name": "Mama Bear"}, we can make "full name" a function like
+                    this: </p>
+                <p>
+                    <strong>fullName: function () { return this.firstName + " " + this.lastName; }
+                    </strong>
+                </p>
+                <h3>This displays:
+                    <strong>
+                        <span id="showMethod"></span>
+                    </strong>
+                </h3>
+
+
 
             </div>
         </div>
@@ -43,26 +94,54 @@
         <!--##### Break ######-->
         <div class="wrapper">
             <div class="topic fluency">
-                <h2>Inheritance</h2>
+                <h2>Inheritance & Instantiation</h2>
                 <p>
                     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Inheritance">From MDN:</a> All objects in JavaScript inherit from at least one other object. The object being inherited
                     from is known as the prototype, and the inherited properties can be found in the prototype object of
-                    the constructor</p>
+                    the constructor. In the screenshot below, the Instructor function is the prototype for future objects.
+                    Objects created as new instances of Instructor will inherit the properties of name, age, and gender from
+                    this function.</p>
+
+                <img src="images/constructor_example.png"> </div>
+        </div>
+        <!--##### Break ######-->
+        <div class="wrapper">
+            <div class="topic fluency">
+                <h2>Constructor functions</h2>
+                <p>The prototype is a constructor function. This allows you to create an instance of this object with the word
+                    new.
+                </p>
             </div>
         </div>
         <!--##### Break ######-->
         <div class="wrapper">
             <div class="topic fluency">
-                <h2>Instantiation</h2>
-                <p> Creating a new object.</p>
+                <h2>Object.creation</h2>
+
+                <p>Object.create is very useful because it allows you to use the prototype object to create a new object without
+                    having to define a constructor function. You can see a screenshot of my code.</p>
+                <p>
+                    <strong>Check the console to see the out put of this function.</strong>
+                </p>
+                <img src="images/object_create.png">
             </div>
         </div>
+
         <!--##### Break ######-->
         <div class="wrapper">
             <div class="topic fluency">
-                <h2>Object Creation Functions</h2>
-                <p>Constructor function</p>
-                <p>Object create</p>
+                <h2>Aha! Moment</h2>
+                <p>One of my big realizations while studying this subject is that much of the built-in functions we use in JavaScript
+                    are objects. For example DOM is the Document
+                    <em>Object</em> Model. Things like Number, Math, and Date are also objects. Those words perform functions
+                    when concatenated to other words because those words represent
+                    <em>objects</em>. Aha! This is important to know!
+                </p>
+                <p>
+                    <strong>References:</strong>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects">These instructions at MDN</a>
+                    were very helpful.</p>
+
             </div>
         </div>
 

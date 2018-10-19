@@ -112,7 +112,7 @@ h2 {
 header, main, footer {
     margin: 1.25rem auto;
     padding: .5rem;
-    max-width: 700px/* xxxpx (px = pixel is a unit of measure)  */
+    max-width: 80%/* xxxpx (px = pixel is a unit of measure)  */
     ;
 }
 

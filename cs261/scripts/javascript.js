@@ -149,5 +149,146 @@ function showKidNames() {
 }
 
 
-/////###### JAVASCRIPT OBJECTS ###### //////////
+/////###### JAVASCRIPT OBJECTS  ###### //////////
+
+var character = {
+    firstName: "Mama",
+    lastName: "Bear",
+    fullName: function () {
+        return this.firstName + " " + this.lastName;
+    }
+};
+document.getElementById("showMethod").innerHTML = character.fullName();
+
+
+// four variables are created and assigned in a single go, 
+// separated by commas
+var myObj = new Object(),
+    str = 'myString',
+    rand = Math.random(),
+    obj = new Object();
+
+myObj.type = 'Dot syntax';
+myObj['date created'] = 'String with space';
+myObj[str] = 'String value';
+myObj[rand] = 'Random Number';
+myObj[obj] = 'Object';
+myObj[''] = 'Even an empty string';
+// show what is in this object in the console for learning purposes.
+console.log(myObj);
+
+/// play with objects using the college courses
+var myCourse = new Course('Backend Development', 'CS 260', 'Fall 2018');
+var jtsCourse = new Course('Social Media', 'COMM 315', 'Fall 2018');
+var djsCourse = new Course('Software Engineering', 'CS 364', 'Fall 2018');
+
+
+function Instructor(name, age, gender) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+}
+
+var gary = new Instructor('Gary James', 33, 'M');
+var scott = new Instructor('Scott Burton', 39, 'M');
+
+function Course(title, identifier, semester, teacher) {
+    this.title = title;
+    this.identifier = identifier;
+    this.semester = semester;
+    this.teacher = teacher;
+}
+var course1 = new Course('Mobile Applications', 'CS 261', 'Fall 2018', gary);
+var course2 = new Course('Web Engineering', 'CS 313', 'Fall 2018', scott);
+console.log(course1.teacher.name);
+console.log(djsCourse.title);
+for (var courses in djsCourse) {
+    console.log(courses + " has value " + djsCourse[courses]);
+}
+for (var courses in course1) {
+    console.log(courses + " is " + course1[courses]);
+}
+for (var courses in course1.teacher) {
+    console.log(courses + " = " + course1.teacher[courses]);
+}
+
+var keys = Object.keys(course1);
+for (var i = 0; i < keys.length; i++) {
+    console.log(course1[keys[i]]);
+}
+var keys = Object.keys(course2);
+for (var i = 0; i < keys.length; i++) {
+    console.log(course2[keys[i]]);
+}
+
+var keys = Object.keys(course2);
+for (var i = 0; i < keys.length; i++) {
+    console.log(keys[i] + " equals " + course2[keys[i]]);
+}
+
+function showObjects() {
+    var keys = Object.keys(course1);
+    for (var i = 0; i < keys.length; i++) {
+        var keyz = keys[i];
+        console.log(course1[keys[i]]);
+    }
+}
+document.getElementById("showObjects").innerHTML = course1.teacher.name;
+/////###### Layered Instantiation #### /////
+
+function writeLayer() {
+    var keys = Object.keys(course1);
+    var text = "";
+    for (var i = 0; i < keys.length - 1; i++) {
+        text += "The class " + (keys[i] + " is " + course1[keys[i]]) + ". </br>";
+        //text += "The class " + (keys[i] + " is " + "course1" + "." + keys[i] + " </br>");
+    }
+    for (var keys1 in course1.teacher) {
+        text += "The class instructor's " + keys1 + " is " + course1.teacher[keys1] + ". </br>";
+    }
+
+    document.getElementById("writeLayer").innerHTML = text;
+}
+
+
+
+///#### Simple Instantiation ######///////
+
+///test code in console
+var cube = { length: 10, width: 101, height: 109 }
+for (var prop in cube) {
+    console.log(prop + " has value " + cube[prop]);
+}
+
+///code for HTML
+function writeProp() {
+    var cube = { length: 10, width: 101, height: 109 }
+    var text = "";
+    for (var prop in cube) {
+        text += "Cube " + (prop + " is " + cube[prop]) + " ft. </br>";
+    }
+    document.getElementById("writeProp").innerHTML = text;
+}
+
+
+//##### Object Creation
+// Fruit properties and method encapsulation
+var Fruit = {
+    type: 'Apple', // Default value of properties
+    displayType: function () {  // Method which will display type of Fruit
+        console.log(this.type);
+    }
+};
+
+// Create new animal type called animal1 
+var fruit1 = Object.create(Fruit);
+fruit1.displayType(); // Output:Apple
+
+// Create new fruit type called Banana
+var banana = Object.create(Fruit);
+banana.type = 'Bananas';
+banana.displayType(); // Output:Banana
+
+
+
 
