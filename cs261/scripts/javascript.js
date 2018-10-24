@@ -191,7 +191,7 @@ function Instructor(name, age, gender) {
 
 var gary = new Instructor('Gary James', 33, 'M');
 var scott = new Instructor('Scott Burton', 39, 'M');
-
+// colored notation styling
 function Course(title, identifier, semester, teacher) {
     this.title = title;
     this.identifier = identifier;
@@ -202,6 +202,29 @@ var course1 = new Course('Mobile Applications', 'CS 261', 'Fall 2018', gary);
 var course2 = new Course('Web Engineering', 'CS 313', 'Fall 2018', scott);
 console.log(course1.teacher.name);
 console.log(djsCourse.title);
+
+//// Tommy's function///
+function Automattician(intro, name, dept) {
+    this.intro = intro
+    this.name = name
+    this.dept = dept
+}
+var tommy = new Automattician("Hi there! my name is ", "Tommy", "Woo");
+
+console.log(tommy);
+
+tommy.talk = tommy.intro + "" + tommy.name + ". I work in the " + tommy.dept + " department.";
+
+
+console.log(tommy.talk);
+
+
+
+//////
+
+
+
+
 for (var courses in djsCourse) {
     console.log(courses + " has value " + djsCourse[courses]);
 }
@@ -288,7 +311,6 @@ fruit1.displayType(); // Output:Apple
 var banana = Object.create(Fruit);
 banana.type = 'Bananas';
 banana.displayType(); // Output:Banana
-
 
 
 

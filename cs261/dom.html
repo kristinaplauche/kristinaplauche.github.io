@@ -3,35 +3,53 @@
 
 <head>
     <meta charset="utf-8">
-    <title>JavaScript Fluency</title>
+    <title>DOM Fluency| Demonstrate fluency in DOM Manipulation Using createElement, appendChild, insertBefore</title>
+    <meta name="description" content="cs-261 document object model ">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/styles.css">
 
-    Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays
 
-    <script type="text/javascript">
-        /* Input: 
-         * Processing: 
-         * Output: 
-         */
-        function coolThing() {
-            // Read something from the user.
-            var text = document.getElementById('theInputBox').value;
-
-            // Convert what the user typed from text into a number.
-            var thingOne = parseFloat(text);
-
-            // Convert thingOne into thingTwo.
-            var thingTwo = thingOne * 0.94635295;
-
-            // Display the amount of thingTwo to the user.
-            document.getElementById('outputDiv').innerHTML = thingTwo;
-        }
-    </script>
 </head>
 
-<body>                               Enter something:
-    <input type="text" id="theInputBox">
-    <button type="button" onclick="coolThing()">Click</button>
-    <div id="outputDiv"></div>
+<body>
+    <div class="wrapper">
+        <h1>Document Object Model</h1>
+        <div class="topic fluency" id="parent1">
+            <h2>createElement</h2>
+            <div id="div1">The text above has been created dynamically.</div>
+            <button type="button" onclick="addElement()" class="btn-success">Create Element</button>
+            <hr/>
+            <h2>appendChild</h2>
+            <p id="p1">Can we get ice cream? </p>
+            <button class="btn-success" onclick="addTextNode('YES! ');">YES!</button>
+            <button class="btn-success" onclick="addTextNode('NO! ');">NO!</button>
+            <button class="btn-success" onclick="addTextNode('MAYBE SO! ');">MAYBE SO!</button>
+
+            <hr />
+            <ul id="myList">
+                <li>Bananas</li>
+                <li>Apples</li>
+            </ul>
+
+            <p>Click the button to append an item to the end of the list.</p>
+
+            <button class="btn-success" onclick="appendList()">Add an Item</button>
+
+            <hr/>
+            <h2>insertBefore</h2>
+            <ul id="myList2">
+                <li>Bananas</li>
+                <li>Apples</li>
+            </ul>
+
+            <p>Click the button to append an item to the beginning of the list.</p>
+
+            <button class="btn-success" onclick="appendListBefore()">Add an Item</button>
+        </div>
+
+    </div>
+
 </body>
+<script src="scripts/dom.js "></script>
 
 </html>
