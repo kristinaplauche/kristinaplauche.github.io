@@ -1,5 +1,5 @@
 ///##### JSON Weather Underground
-var requestURL = 'http://api.wunderground.com/api/cdf3f3537bf94c1c/conditions/q/GA/Kennesaw.json';
+var requestURL = 'https://api.wunderground.com/api/cdf3f3537bf94c1c/conditions/q/GA/Kennesaw.json';
 var request = new XMLHttpRequest();
 request.open('GET', requestURL, true);
 request.send();
