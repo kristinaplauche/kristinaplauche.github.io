@@ -3,35 +3,194 @@
 
 <head>
     <meta charset="utf-8">
-    <title>JavaScript Fluency</title>
+    <title>JavaScript Events & Local Storage| onchange, onload, mouse overs, set get and clear storage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="description" content="cs-261 javascript objects code fluency ">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/styles.css">
 
-    Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays
 
-    <script type="text/javascript">
-        /* Input: 
-         * Processing: 
-         * Output: 
-         */
-        function coolThing() {
-            // Read something from the user.
-            var text = document.getElementById('theInputBox').value;
-
-            // Convert what the user typed from text into a number.
-            var thingOne = parseFloat(text);
-
-            // Convert thingOne into thingTwo.
-            var thingTwo = thingOne * 0.94635295;
-
-            // Display the amount of thingTwo to the user.
-            document.getElementById('outputDiv').innerHTML = thingTwo;
-        }
-    </script>
 </head>
 
-<body>                               Enter something:
-    <input type="text" id="theInputBox">
-    <button type="button" onclick="coolThing()">Click</button>
-    <div id="outputDiv"></div>
+<body onload="orderQuantities()">
+
+    <!---  ####### Body content begins ####### -->
+    <div id="result"></div>
+    <div class="container text-center topic fluency">
+        <h2>JavaScript Events</h2>
+        <div class="row">
+            <div class="col-sm-12 panel panel-default text-left">
+                <div class="panel-body">
+                    <p>
+                        <b>Today'sDate:</b>
+                        <span id="todayDate"></span>
+                    </p>
+                    <p>You're purchasing food for a food co-op. Some people want full portions and some people want half portions.
+                        You need to figure how many boxes of apples to purchase for the group. Fill in the fields below to
+                        figure out how many boxes you should buy.</p>
+
+                    <div>
+                        <label># People who want a Full Portion:</label>
+                        <div>
+                            <input type="number" onfocus="targetInput(this)" onfocusout="targetOutput(this)" name="full-count" id="full-count" aria-label="enter number of full portions ordered">
+                        </div>
+                        <input type="hidden" name="full-budget" id="full-budget" readonly value="10">
+                    </div>
+
+
+                    <div>
+                        <label># People who want a Half Portion:</label>
+                        <div>
+                            <input type="number" onfocus="targetInput(this)" onfocusout="targetOutput(this)" name="half-count" id="half-count" size="10"
+                                onchange="orderQuantities()" aria-label="enter number of half portions ordered">
+                        </div>
+                        <input type="hidden" name="half-budget" id="half-budget" size="10" value="5" readonly aria-label="enter budget per half portion">
+                    </div>
+                    <h3>Purchasing Budget:
+                        <span id="target-total"></span>
+                    </h3>
+                </div>
+            </div>
+
+        </div>
+        <!-- Left column -->
+
+
+        <!-- Center column -->
+        <div class="col-sm-12">
+
+            <!-- ####### ORDER FORM BEGINS-->
+            <div class="panel panel-default">
+
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <div class="well">
+                            <div class="thumbnail text-left">
+                                <h4>Item</h4>
+
+
+                                <div class="d-inline row">
+                                    <div class="col-sm-2">
+
+                                        <label>#Apples Per Full:</label>
+                                        <div>
+                                            <input type="number" onfocus="targetInput(this)" onfocusout="targetOutput(this)" name="per-full" id="per-full" placeholder="#"
+                                                onchange="orderQuantities()">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <label>#Apples Per Half:</label>
+                                        <div>
+                                            <input type="number" onfocus="targetInput(this)" onfocusout="targetOutput(this)" name="per-half" id="per-half" placeholder="#"
+                                                onchange="orderQuantities()">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm-5">
+                                        <label>Item Name:</label>
+                                        <div>
+                                            <input type="text" name="item-name" id="item-name" size="40" value="Apples">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="d-inline row">
+
+                                    <div class="form-group col-sm-2">
+                                        <label># in Box</label>
+                                        <div>
+                                            <input type="number" onfocus="targetInput(this)" onfocusout="targetOutput(this)" name="item-count" id="item-count" placeholder="#"
+                                                onchange="orderQuantities()">
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group col-sm-1">
+                                        <label>Unit:</label>
+                                        <div>
+                                            <select name="item-unit" id="item-unit">
+
+                                                <option value="count">count</option>
+                                                <option value="pound">pound</option>
+                                                <option value="each">each</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- -->
+                                    <div class="form-group col-sm-2">
+                                        <label>Box Price:</label>
+                                        <div>
+                                            <input type="number" onfocus="targetInput(this)" onfocusout="targetOutput(this)" name="item-price" id="item-price" placeholder="$0.00"
+                                                onchange="orderQuantities()">
+                                        </div>
+
+                                    </div>
+                                    <!-- -->
+                                    <div class="form-group col-sm-2">
+                                        <label># Boxes to Order:</label>
+                                        <div>
+                                            <input type="number" name="item-quantity" id="item-quantity" readonly>
+                                        </div>
+                                    </div>
+                                    <!-- -->
+                                    <div class="form-group col-sm-2">
+                                        <label>Total:</label>
+                                        <div>
+
+                                            <input type="number" name="item-total" id="item-total" readonly>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="d-inline row">
+                                    <div class="form-group col-sm-2">
+                                        <label>Total with Tax:</label>
+                                        <div>
+                                            $
+                                            <input type="number" step=".01" name="grand-total" id="grand-total">
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <h3>Amount Left to Spend:
+
+                                    <span id="over-under"></span>
+                                </h3>
+                                <div class="d-inline row">
+                                    <div class="form-group col-sm-3">
+                                        <form action="javascript_events.html">
+                                            <input type="submit" class="button-save" onclick="storeLocal()" value="Save">
+                                        </form>
+                                    </div>
+                                    <div class="form-group col-sm-3">
+                                        <form action="javascript_events.html">
+                                            <input type="submit" class="button-clear" onclick="clearLocal()" value="Clear">
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+    </div>
+
 </body>
+<script src="scripts/js_events.js "></script>
 
 </html>

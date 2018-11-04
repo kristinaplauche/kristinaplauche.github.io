@@ -8,30 +8,29 @@
     Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays
 
     <script type="text/javascript">
-        /* Input: 
-         * Processing: 
-         * Output: 
-         */
-        function coolThing() {
-            // Read something from the user.
-            var text = document.getElementById('theInputBox').value;
 
-            // Convert what the user typed from text into a number.
-            var thingOne = parseFloat(text);
-
-            // Convert thingOne into thingTwo.
-            var thingTwo = thingOne * 0.94635295;
-
-            // Display the amount of thingTwo to the user.
-            document.getElementById('outputDiv').innerHTML = thingTwo;
-        }
     </script>
 </head>
 
-<body>                               Enter something:
-    <input type="text" id="theInputBox">
-    <button type="button" onclick="coolThing()">Click</button>
-    <div id="outputDiv"></div>
+<body>
+    <div id="welcomeMessage"></div>
+    <form id="contactForm" action="#" method="POST">
+        <div class="field">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+        </div>
+        <div class="field">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div class="field">
+            <label for="message">Message</label>
+            <textarea name="message" id="message"></textarea>
+        </div>
+        <div class="field">
+            <input type="submit" value="send">
+        </div>
+    </form>
 </body>
 
 </html>

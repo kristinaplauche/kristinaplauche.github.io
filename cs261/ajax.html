@@ -3,35 +3,75 @@
 
 <head>
     <meta charset="utf-8">
-    <title>JavaScript Fluency</title>
+    <title>AJAX Fluency | Use an XMLHTTPRequest to Consume a JSON Web Service</title>
 
-    Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays
+    <meta name="description" content="cs-261 javascript objects code fluency ">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/styles.css">
 
-    <script type="text/javascript">
-        /* Input: 
-         * Processing: 
-         * Output: 
-         */
-        function coolThing() {
-            // Read something from the user.
-            var text = document.getElementById('theInputBox').value;
 
-            // Convert what the user typed from text into a number.
-            var thingOne = parseFloat(text);
-
-            // Convert thingOne into thingTwo.
-            var thingTwo = thingOne * 0.94635295;
-
-            // Display the amount of thingTwo to the user.
-            document.getElementById('outputDiv').innerHTML = thingTwo;
-        }
-    </script>
 </head>
 
-<body>                               Enter something:
-    <input type="text" id="theInputBox">
-    <button type="button" onclick="coolThing()">Click</button>
-    <div id="outputDiv"></div>
+<body>
+
+    <main>
+        <div class="wrapper">
+            <h1>
+                <span id="location"></span> Weather</h1>
+            <div class="topic fluency">
+
+                <section>
+
+
+
+                    <div class="wrapweather">
+
+                        <div class="weather">
+
+
+                            <h2 id="desc"></h2>
+                            <span id="imageIcon">
+
+
+                            </span>
+
+                            <p>
+                                <b>Current Temperature:</b>
+                                <span id="currentTemp"></span>&deg; F
+                            </p>
+
+
+                            <p>
+                                <b>Wind Speed: </b>
+                                <span id="windBox"></span> mph
+                            </p>
+
+                            <p>
+                                <b>WindChill: </b>
+                                <span id="windchill"></span>&deg; F
+
+                            </p>
+
+
+                            <p>
+                                <b>Forecast:</b>
+                                <span id="forecast"></span>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </section>
+
+            </div>
+        </div>
+    </main>
 </body>
+
+</html>
+</body>
+<script src="scripts/ajax.js "></script>
 
 </html>

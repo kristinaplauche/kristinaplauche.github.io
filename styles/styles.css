@@ -97,6 +97,16 @@ hr {
     text-align: center;
 }
 
+.button-save {
+    background-color: black;
+    color: white;
+    padding: 5%;
+}
+
+.button-clear {
+    padding: 5%;
+}
+
 h1 {
     font-size: 32px/* x.xrem  (rem is a unit of measure) */
     ;
@@ -141,4 +151,27 @@ nav {
     padding: 5px;
     background-color: #eee;
     line-height: 1.5em;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: gray;
+    color: #000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
