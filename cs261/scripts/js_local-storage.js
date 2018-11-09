@@ -61,24 +61,18 @@ function targetOutput(x) {
 
 // local Storage of form fields
 if (typeof (Storage) !== "undefined") {
-    // get the variables
-    function storeLocal() {
-        var fullCount = parseFloat(document.getElementById('full-count').value);
-        var halfCount = parseFloat(document.getElementById('half-count').value);
-        var perFull = parseFloat(document.getElementById('per-full').value);
-        var perHalf = parseFloat(document.getElementById('per-half').value);
-        var itemCount = parseFloat(document.getElementById('item-count').value);
-        var itemPrice = parseFloat(document.getElementById('item-price').value);
 
-        // store the variables
-        localStorage.setItem("fullCount", fullCount);
-        localStorage.setItem("halfCount", halfCount);
-        localStorage.setItem("perFull", perFull);
-        localStorage.setItem("perHalf", perHalf);
-        localStorage.setItem("itemCount", itemCount);
-        localStorage.setItem("itemPrice", itemPrice);
+    //retrieve the local storage variables and use them on the page in the input fields
+    // this uses the new object that was created when the user clicked Save
+    var stuff = JSON.parse(localStorage.getItem("stuff"));
+    document.getElementById("full-count").value = stuff.fullCount;
+    document.getElementById("half-count").value = stuff.halfCount;
+    document.getElementById("per-full").value = stuff.perFull;
+    document.getElementById("per-half").value = stuff.perHalf;
+    document.getElementById("item-count").value = stuff.itemCount;
+    document.getElementById("item-price").value = stuff.itemPrice;
 
-    }
+
 
 } else {
 
@@ -86,13 +80,31 @@ if (typeof (Storage) !== "undefined") {
     document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
 }
 
-//retrieve the local storage variables and use them on the page
-document.getElementById("full-count").value = localStorage.getItem("fullCount");
-document.getElementById("half-count").value = localStorage.getItem("halfCount");
-document.getElementById("per-full").value = localStorage.getItem("perFull");
-document.getElementById("per-half").value = localStorage.getItem("perHalf");
-document.getElementById("item-count").value = localStorage.getItem("itemCount");
-document.getElementById("item-price").value = localStorage.getItem("itemPrice");
+//create an Object
+
+function OrderStuff(fullCount, halfCount, perFull, perHalf, itemCount, itemPrice) {
+    this.fullCount = fullCount;
+    this.halfCount = halfCount;
+    this.perFull = perFull;
+    this.perHalf = perHalf;
+    this.itemCount = itemCount;
+    this.itemPrice = itemPrice;
+}
+
+//store the field inputs as a new object
+function storeLocal() {
+    var stuff = new OrderStuff(
+        parseFloat(document.getElementById('full-count').value),
+        parseFloat(document.getElementById('half-count').value),
+        parseFloat(document.getElementById('per-full').value),
+        parseFloat(document.getElementById('per-half').value),
+        parseFloat(document.getElementById('item-count').value),
+        parseFloat(document.getElementById('item-price').value)
+    );
+    localStorage.setItem("stuff", JSON.stringify(stuff));
+}
+
+
 
 // clear the local variables
 function clearLocal() {
