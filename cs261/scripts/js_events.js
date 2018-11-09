@@ -29,6 +29,8 @@ function orderQuantities() {
     //make sure the user doesn't see NaN when nothing has been calculated yet
     if (amountLeft > 0) {
         document.getElementById('over-under').innerHTML = "$" + amountLeft.toFixed(2);
+    } else if (amountLeft < 0) {
+        document.getElementById('over-under').innerHTML = "$" + amountLeft.toFixed(2);
     }
 
 
