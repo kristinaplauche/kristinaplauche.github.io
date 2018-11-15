@@ -1,4 +1,4 @@
-//###### DOM FLUENCY CODE ######///////
+//###### Manipulating CSS with JavaScript FLUENCY CODE ######///////
 
 
 document.body.onload = changeDiv;
