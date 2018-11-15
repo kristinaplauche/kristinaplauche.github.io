@@ -3,35 +3,75 @@
 
 <head>
     <meta charset="utf-8">
-    <title>JavaScript Fluency</title>
+    <title>HTML5 Media Tags | video, audio, canvas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="description" content="cs-261 javascript objects code fluency ">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/styles.css">
 
-    Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays
 
-    <script type="text/javascript">
-        /* Input: 
-         * Processing: 
-         * Output: 
-         */
-        function coolThing() {
-            // Read something from the user.
-            var text = document.getElementById('theInputBox').value;
-
-            // Convert what the user typed from text into a number.
-            var thingOne = parseFloat(text);
-
-            // Convert thingOne into thingTwo.
-            var thingTwo = thingOne * 0.94635295;
-
-            // Display the amount of thingTwo to the user.
-            document.getElementById('outputDiv').innerHTML = thingTwo;
-        }
-    </script>
 </head>
 
-<body>                               Enter something:
-    <input type="text" id="theInputBox">
-    <button type="button" onclick="coolThing()">Click</button>
-    <div id="outputDiv"></div>
+<body>
+    <main>
+        <div class "topic">
+            <div class="topic fluency text-center">
+                <h2>Video</h2>
+                <video width="80%" height="auto" controls>
+                    <source src="images/mama.k.intro.mov" type="video/mp4">
+                    <p> Your browser does not support the video tag.</p>
+                </video>
+                <p>
+                    <a href="https://www.instagram.com/mama.k.coding/?hl=en">Instagram: Mama.K Coding</a>
+                </p>
+                <p>
+                    <a href="https://www.youtube.com/channel/UC2XcJd9ZMGOlAyAeH79TtKA">YouTube: Mama.K Coding</a>
+                </p>
+            </div>
+            <div class="topic fluency text-center">
+                <h2>Audio</h2>
+                <audio controls>
+                    <source src="images/girls_have_fun.mp3" type="audio/ogg">
+                    <source src="horse.mp3" type="audio/mpeg">
+                    <p>Your browser does not support the audio element.</p>
+                </audio>
+            </div>
+            <div class="topic fluency text-center">
+                <h2>Canvas</h2>
+                <canvas id="canvas" width="400" height="400" style="background-color:purple"></canvas>
+                <p>Clock credit goes to
+                    <a href="https://www.w3schools.com/graphics/canvas_clock.asp">W3 Schools</a>. I shamelessly copied their clock because I wanted to learn how to do something more than
+                    draw a simple shape or fill a gradient. I changed colors, styles, and position (that's why the clock
+                    is in the top left corner). This helped me learn about how canvas works.
+                </p>
+                <hr/>
+
+                <canvas id="myCanvas" width="400" height="400" style="border:1px solid purple;background-color:lavender">
+                    Your browser does not support the canvas element.
+                </canvas>
+                <div class="text-left">
+                    <p>I also researched other cool things to do with Canvas just to see what is possible. </p>
+                    <p>Here are some favorites:</p>
+                    <ul>
+                        <li>
+                            <a href="https://codepen.io/goker/pen/kbEdn">Mouse Drawing</a>
+                        </li>
+                        <li>
+                            <a href="http://codepen.io/jackrugile/pen/Apfyn">Scrolling Mountains</a>
+                        </li>
+                        <li>
+                            <a href="http://codepen.io/belsrc/pen/jefah">Charts</a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+    </main>
 </body>
+<script src="scripts/html-media.js "></script>
 
 </html>
