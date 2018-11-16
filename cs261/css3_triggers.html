@@ -3,35 +3,76 @@
 
 <head>
     <meta charset="utf-8">
-    <title>JavaScript Fluency</title>
+    <title>CSS Transitions & Transforms Fluency | Demonstrate fluency in Designing, Defining, and Triggering CSS3 Transitions &
+        Transforms without Custom Libraries </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="description" content="cs-261 javascript objects code fluency ">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/styles.css">
 
-    Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays
 
-    <script type="text/javascript">
-        /* Input: 
-         * Processing: 
-         * Output: 
-         */
-        function coolThing() {
-            // Read something from the user.
-            var text = document.getElementById('theInputBox').value;
 
-            // Convert what the user typed from text into a number.
-            var thingOne = parseFloat(text);
-
-            // Convert thingOne into thingTwo.
-            var thingTwo = thingOne * 0.94635295;
-
-            // Display the amount of thingTwo to the user.
-            document.getElementById('outputDiv').innerHTML = thingTwo;
-        }
-    </script>
 </head>
 
-<body>                               Enter something:
-    <input type="text" id="theInputBox">
-    <button type="button" onclick="coolThing()">Click</button>
-    <div id="outputDiv"></div>
+<body>
+    <main>
+
+
+        <div class="topic fluency col-sm-12">
+            <h2>Transitions & Transforms</h2>
+            <p>Transitions and transforms go hand in hand. Transitions make transitions smooth.</p>
+            <div class="col-sm-6">
+                <div>
+                    <label>Transition Time in Seconds</label>
+                    <select id="transitionBox">
+                        <option value="all 1s">1</option>
+                        <option value="all 2s">2</option>
+                        <option value="all 3s">3</option>
+                        <option value="all 5s">5</option>
+                        <option value="all 8s">8</option>
+                        <option value="all 10s">10</option>
+                    </select>
+
+                </div>
+                <div>
+                    <label>Color</label>
+                    <select id="theInputBox" onchange="changeDiv()">
+                        <option value="lightskyblue">Daytime</option>
+                        <option value="orange">Sunset</option>
+                        <option value="navy">Night</option>
+
+                    </select>
+
+                </div>
+
+
+
+
+                <div class="col-sm-6">
+                    <label>Circle Size</label>
+
+                    <input type="range" id="theWidthBox" min="10" max="500" value="400" onchange="changeDiv()">
+                </div>
+
+
+            </div>
+            <div class="col-sm-6">
+                <div id="outputDiv">
+
+                    <div id="sun">
+                    </div>
+                    <div id="moon">
+                    </div>
+                </div>
+
+            </div>
+
+    </main>
+
 </body>
+<script src="scripts/css_trans.js "></script>
 
 </html>

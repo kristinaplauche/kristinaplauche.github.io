@@ -58,8 +58,7 @@ function changeDiv() {
         document.getElementById('sun').style.left = 10 + "%";
         document.getElementById('sun').style.top = 20 + "%";
 
-        //document.getElementById('sun').style.left = 20 + "%";
-        // document.getElementById('sun').style.top = 15 + "%";
+
 
 
 

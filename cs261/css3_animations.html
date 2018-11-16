@@ -3,35 +3,46 @@
 
 <head>
     <meta charset="utf-8">
-    <title>JavaScript Fluency</title>
+    <title>CSS Animations, Transitions & Transforms Fluency | Demonstrate fluency in Designing, Defining, and Triggering CSS3 Animations,
+        Transitions & Transforms without Custom Libraries </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="description" content="cs-261 javascript objects code fluency ">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
 
-    Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays
 
-    <script type="text/javascript">
-        /* Input: 
-         * Processing: 
-         * Output: 
-         */
-        function coolThing() {
-            // Read something from the user.
-            var text = document.getElementById('theInputBox').value;
 
-            // Convert what the user typed from text into a number.
-            var thingOne = parseFloat(text);
-
-            // Convert thingOne into thingTwo.
-            var thingTwo = thingOne * 0.94635295;
-
-            // Display the amount of thingTwo to the user.
-            document.getElementById('outputDiv').innerHTML = thingTwo;
-        }
-    </script>
 </head>
 
-<body>                               Enter something:
-    <input type="text" id="theInputBox">
-    <button type="button" onclick="coolThing()">Click</button>
-    <div id="outputDiv"></div>
+<body>
+    <main>
+
+
+        <div class="topic fluency col-sm-12">
+            <h2>Animations, Transitions & Transforms</h2>
+
+
+            <div class="col-sm-6 text-center">
+                <div onmouseover="pauseDiv()" onmouseout="unPauseDiv()">
+                    <div id="outputDiv">
+
+                        <div id="sun">
+                        </div>
+
+                    </div>
+                </div>
+                <input type="submit" class="btn-primary" onclick="stopDiv()" value="Ball in a Box">
+                <input type="submit" class="btn-primary" onclick="startDiv()" value="Sky Scene">
+                <p>Mouseover to pause.</p>
+            </div>
+
+    </main>
+
 </body>
+<script src="scripts/css_animations.js "></script>
 
 </html>

@@ -1,0 +1,90 @@
+@keyframes slide {
+    from {
+        left: 10%;
+    }
+    to {
+        left: 10%;
+    }
+}
+
+#outputDiv {
+    animation-name: slide;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes skyScene {
+    0% {
+        background-color: lightblue;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    50% {
+        background-color: orange;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    100% {
+        background-color: navy;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+}
+
+#sun {
+    animation-name: orbit;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes sunScene {
+    0% {
+        background-color: yellow;
+        transform: scale(.75, .75);
+        left: 70%;
+        top: -30%;
+    }
+    50% {
+        background-color: lightgoldenrodyellow;
+        transform: scale(2, 2);
+        left: 30%;
+        top: 135%;
+    }
+    100% {
+        background-color: whitesmoke;
+        transform: scale(.8, .8);
+        left: 5%;
+        top: -30%;
+    }
+}
+
+@keyframes orbit {
+    0% {
+        transform: translate(0, 0);
+    }
+    /* don't change for 5% of the time...pause */
+    25% {
+        transform: translate(225%, 0%);
+    }
+    /* start moving again */
+    30% {
+        transform: translate(225%, 0%);
+    }
+    /* pause */
+    50% {
+        transform: translate(225%, 225%);
+    }
+    /* move */
+    55% {
+        transform: translate(225%, 225%);
+    }
+    75% {
+        transform: translate(0%, 225%);
+    }
+    80% {
+        transform: translate(0%, 225%);
+    }
+    100% {
+        transform: translate(0%, 0%);
+    }
+}
