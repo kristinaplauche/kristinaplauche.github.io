@@ -18,6 +18,10 @@ body {
     ;
 }
 
+.hide {
+    border: 2px dashed green;
+}
+
 .right-image {
     width: 150px;
     height: auto;

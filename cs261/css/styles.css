@@ -1,0 +1,244 @@
+/* Green: ##99ba3c 
+Brown: #432c28
+Red:#9f2322
+Cream: #f0e9ce */
+
+@import url('https://fonts.googleapis.com/css?family=Catamaran');
+* {
+    font-family: "Catamaran", Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f0e9ce;
+    color: #432c28;
+    min-height: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+    height: 100%;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box .card {
+    max-width: 90%;
+    min-width: 50%;
+}
+
+.item {
+    width: 95%;
+}
+
+div.card.item {
+    width: 100%;
+}
+
+.navbar-inverse {
+    background-color: #f0e9ce;
+    color: #432c28;
+    border-width: 0 0 3px 0;
+    border-color: #432c28;
+    border-style: solid;
+    border-radius: 0;
+    font-size: 1.2em;
+}
+
+.btn:hover, .btn:focus, .btn:active {
+    background-color: #f0e9ce;
+    color: #432c28;
+    border-color: rgba(67, 44, 40, .5);
+}
+
+.btn-primary, .btn.btn-primary, input.btn.btn-primary, input.btn-primary.active:focus, input.btn-primary.active:hover {
+    background-color: #432c28;
+    color: #f0e9ce;
+    border-color: #432c28;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active:hover, .btn-primary.active:focus, .btn-primary:active:hover, .btn-primary:active:focus {
+    background-color: #f0e9ce;
+    color: #432c28;
+    border-color: rgba(67, 44, 40, .5);
+}
+
+.red {
+    background-color: #9f2322;
+    color: #f0e9ce;
+    padding: .5%;
+}
+
+.brown {
+    background-color: #432c28;
+    color: #f0e9ce;
+    padding: .5%;
+}
+
+.green {
+    background-color: #99ba3c;
+    color: #432c28;
+    padding: .5%;
+}
+
+.cream {
+    color: #f0e9ce
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #432c28;
+    font-size: 1.2em;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid rgba(67, 44, 40, .5);
+    padding: 0;
+    margin: .5%;
+    width: 32%;
+    height: 100%;
+}
+
+.tiny {
+    max-width: 150px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tall {
+    height: 420px;
+}
+
+.home {
+    height: 630px;
+}
+
+figure {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figure>img {
+    max-width: 100%;
+    height: auto;
+}
+
+.bushel {
+    width: 100px;
+    height: auto;
+}
+
+.jumbotron {
+    background-color: white;
+}
+
+.card.double {
+    max-width: 100%;
+    min-width: 45%;
+    height: 350px;
+}
+
+.card-header {
+    padding: 1%;
+}
+
+.card-body {
+    padding: 3%;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #9f2322;
+    font-size: 1.2em;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    background-color: #99ba3c;
+    color: #432c28;
+    font-size: 1.2em;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+.navbar-brand>img {
+    margin-left: 10px;
+    margin-top: 3%;
+    height: 90%;
+    width: auto;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: #432c28;
+}
+
+footer {
+    padding: 1%;
+}
+
+.footer {
+    width: 100%;
+    height: 60px;
+    background-color: #432c28;
+    color: #f0e9ce;
+}
+
+.no-label {
+    display: none;
+}
+
+input[type=number] {
+    max-width: 100%;
+    min-width: 50%;
+}
+
+.form-header input {
+    margin-bottom: 3px;
+}
+
+.submit {
+    margin: 1%;
+}
+
+.fail-message {
+    color: #9f2322;
+}
+
+label {
+    margin-bottom: 0;
+}
+
+input {
+    margin-bottom: 3%;
+    width: 50%;
+}
+
+label::before {
+    content: "*";
+    color: #9f2322;
+}
+
+hr {
+    border: 1px solid #9f2322;
+}
+
+h3 {
+    padding: 2%;
+}
+
+.overlay {
+    border: 2px dashed green;
+}
+
+.error {
+    color: red;
+    font-size: 1.5em;
+}

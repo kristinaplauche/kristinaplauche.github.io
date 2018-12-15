@@ -33,3 +33,10 @@ function changeDiv() {
 
 
 }
+
+/* function changeDisplay() {
+    //document.getElementById('outputDiv').style.display = "none";
+    document.getElementById("output").class.add("hide");
+
+} */
+
