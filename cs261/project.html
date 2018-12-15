@@ -25,44 +25,44 @@
 
             <div class="card text-left">
                 <div class="card-header full green">
-                    <form action="model/orders-model.php" method="post">
-                        <input name="account_id" id="account_id" type="hidden" value="<?php echo $_SESSION['client']['account_id'];?>">
-                        <h2> Order Form</h2>
+
+                    <input name="account_id" id="account_id" type="hidden" value="<?php echo $_SESSION['client']['account_id'];?>">
+                    <h2> Order Form</h2>
+                    <p>
+                        <b>Today'sDate:</b>
+                        <span id="todayDate"></span>
+                    </p>
+                    <div id="overlay" onchange="dismissOverlay()">
+                        <h2 id="overlay-text"></h2>
                         <p>
-                            <b>Today'sDate:</b>
-                            <span id="todayDate"></span>
+                            <strong># Full Bushels </strong>
+                            <input type="number" onfocus="targetInput(this)" required onfocusout="targetOutput(this)" name="full-count" id="full-count"
+                                min="0" step="1">
                         </p>
-                        <div id="overlay" onchange="dismissOverlay()">
-                            <h2 id="overlay-text"></h2>
-                            <p>
-                                <strong># Full Bushels </strong>
-                                <input type="number" onfocus="targetInput(this)" required onfocusout="targetOutput(this)" name="full-count" id="full-count"
-                                    min="0" step="1">
-                            </p>
-                            <!-- Budget data from co-op info. Used for calculations, but hidden from viewer.-->
-                            <p></p>
-                            <strong>Full Budget $</strong>
-                            <input type="number" name="full-budget" id="full-budget" value="10">
-                            </p>
-                            <p>
-                                <strong># Partial Bushels </strong>
-                                <input type="number" onfocus="targetInput(this)" required onfocusout="targetOutput(this)" name="half-count" id="half-count"
-                                    size="10" onchange="orderQuantities()" min="0" step="1">
-                            </p>
+                        <!-- Budget data from co-op info. Used for calculations, but hidden from viewer.-->
+                        <p></p>
+                        <strong>Full Budget $</strong>
+                        <input type="number" name="full-budget" id="full-budget" value="10">
+                        </p>
+                        <p>
+                            <strong># Partial Bushels </strong>
+                            <input type="number" onfocus="targetInput(this)" required onfocusout="targetOutput(this)" name="half-count" id="half-count"
+                                size="10" onchange="orderQuantities()" min="0" step="1">
+                        </p>
 
-                            <!-- Budget data from co-op info. Used for calculations, but hidden from viewer.-->
-                            <p>
-                                <strong>Small Budget $</strong>
-                                <input type="number" name="half-budget" id="half-budget" size="10" value="5">
-                            </p>
-                            <h2 class="btn-primary" id="overlay-click"></h2>
+                        <!-- Budget data from co-op info. Used for calculations, but hidden from viewer.-->
+                        <p>
+                            <strong>Small Budget $</strong>
+                            <input type="number" name="half-budget" id="half-budget" size="10" value="5">
+                        </p>
+                        <h2 class="btn-primary" id="overlay-click"></h2>
 
 
-                        </div>
+                    </div>
 
-                        <h4>Purchasing Budget:
-                            <span id="target-total"></span>
-                        </h4>
+                    <h4>Purchasing Budget:
+                        <span id="target-total"></span>
+                    </h4>
                 </div>
                 <div class="card-body">
 
@@ -185,11 +185,7 @@
                         <input type="submit" class="btn green" onclick="clearLocal()" value="Clear">
                     </form>
 
-                    <div>
 
-                        <input type="submit" name="submit" value="Submit" class="btn btn-primary">
-                        </form>
-                    </div>
 
 
 
