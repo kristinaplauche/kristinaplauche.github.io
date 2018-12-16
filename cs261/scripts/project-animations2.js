@@ -1,7 +1,20 @@
 
 
+//document.body.onload = startHere;
+function startHere() {
+    document.getElementById('overlay-text').style.opacity = "0";
+    document.getElementById('overlay-text').style.transition = "all 5s";
+    document.getElementById('overlay-text').innerHTML = "<h4 class='red'>Start Here</h4>";
+    document.getElementById('overlay-text').style.animationName = "fadein";
+
+
+
+}
+
 
 function overlay() {
+
+    document.getElementById('overlay-text').style.opacity = "1";
     document.getElementById('overlay-text').innerHTML = "<h4>How many baskets were ordered?</h4>";
     document.getElementById('overlay').style.transform = "scale(1.3,1.3)";
     document.getElementById('overlay').style.zIndex = "1"
@@ -23,7 +36,7 @@ function dismissOverlay() {
         document.getElementById('overlay').style.transform = "scale(1,1)";
         document.getElementById('overlay').style.marginLeft = "";
         document.getElementById('overlay').style.backgroundColor = "";
-        document.getElementById('overlay').style.textAlign = "center";
+        document.getElementById('overlay').style.textAlign = "left";
         document.getElementById('overlay').style.padding = "";
         document.getElementById('overlay-click').innerHTML = "";
         document.getElementById('item-overlay').style.transition = "all 5s";
@@ -71,8 +84,5 @@ function dismissPerOverlay() {
     document.getElementById('per-overlay-click').innerHTML = "";
 }
 
-function pagePrint() {
-    window.print();
-}
 
 

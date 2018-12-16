@@ -6,7 +6,9 @@
     <title>Project | Final Project</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
     <meta name="description" content="cs-261 final project ">
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -15,14 +17,7 @@
 
 </head>
 <header>
-    <div class="greeting">
-        <h1>Build a Basket Order Form</h1>
-    </div>
-    <div class="greeting2">
-        <p>You've received lots of orders for holiday gift baskets. Now you need to figure out how much to purchase!
-            <a href="#" onclick="overlay()">Click to Get Started</a>
-        </p>
-    </div>
+    <h1>Build a Basket</h1>
 </header>
 
 <body onload="orderQuantities()">
@@ -41,7 +36,8 @@
 
                 <div id="large-basket">
                     <strong># Large Baskets </strong>
-                    <input class="basket-item" type="number" id="full-count" min="0" step="1" value="0">
+                    <input class="basket-item" type="number" onfocus="overlay()" onfocusout="dismissOverlay()" id="full-count" min="0" step="1"
+                        value="0">
                 </div>
                 <div id="small-basket">
                     <strong># Small Baskets </strong>
@@ -53,6 +49,21 @@
 
                 </div>
                 <span class="btn-primary" id="overlay-click"></span>
+                <form action="project.html">
+                    <input type="submit" class="btn red" onclick="saveBasketCount()" value="Save">
+                </form>
+            </div>
+
+            <div class="box two">
+
+                <h2>Purchasing Budget:
+                    <!--  <span id="target-total"></span> -->
+                    <span id="budget-total"></span>
+
+                </h2>
+
+
+
 
             </div>
 
@@ -78,10 +89,10 @@
                                 <option name="item-name" value="">Please select an item</option>
                                 <option name="item-name" value="Apples">Apples 88 count $25.00</option>
                                 <option name="item-name" value="Bananas">Bananas 17 bunches $22.00</option>
-                                <option name="item-name" value="Pears">Pears 120 count $35.00</option>
-                                <option name="item-name" value="Oranges">Oranges 80 count $16.00</option>
-                                <option name="item-name" value="Plums">Plums 200 count $28.00</option>
-                                <option name="item-name" value="Pineapple">Pineapple 8 count $12.00</option>
+                                <option name="item-name" value="Pears">Pears</option>
+                                <option name="item-name" value="Oranges">Oranges</option>
+                                <option name="item-name" value="Plums">Plums</option>
+                                <option name="item-name" value="Pineapple">Pineapple</option>
                             </select>
                         </div>
                         <span id="item-image"></span>
@@ -141,23 +152,10 @@
         </div>
         <div class="three">
             <div class="card">
+                <img src="images/brown-full.png">
 
-                <img class="bushels" src="images/brown-full.png">
-                <img class="bushels2" src="images/brown-half.png">
-                <img class="bushels" src="images/red-full.png">
-                <img class="bushels2" src="images/red-half.png">
-                <img class="bushels" src="images/green-full.png">
-                <img class="bushels2" src="images/green-half.png">
-                <img class="bushels" src="images/brown-full.png">
-                <img class="bushels2" src="images/brown-half.png">
-                <img class="bushels" src="images/red-full.png">
-                <img class="bushels2" src="images/red-half.png">
-                <img class="bushels" src="images/green-full.png">
-                <img class="bushels2" src="images/green-half.png">
-
-
-
-
+                <!-- <span id="over-under"></span> -->
+                <h4 id="amount-left"></h4>
 
                 <div class="card">
                     <div class="card-header green">
@@ -176,16 +174,14 @@
                         <h2>Order Total:
                             <span id="grand-total-display" onchange="orderQuantities()"></span>
 
-
+                            <span id="grand-total"></span>
 
                         </h2>
 
-
+                        <input type="hidden" readonly step=".01" name="grand-total" id="grand-total" onchange="orderQuantities()">
 
                     </div>
-                    <div>
-                        <button onclick="pagePrint()" class="btn-primary">Print this page</button>
-                    </div>
+
                     <form action="project.html">
                         <input type="submit" class="btn green" onclick="clearLocal()" value="Clear All">
                     </form>

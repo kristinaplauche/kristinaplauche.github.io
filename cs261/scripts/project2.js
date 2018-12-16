@@ -41,9 +41,9 @@ function orderQuantities() {
         document.getElementById('grand-total-display').innerHTML = "$ " + grandTotal.toFixed(2);
     }
     //make sure the user doesn't see NaN when nothing has been calculated yet
-    if (targetTotal > 0) {
-        document.getElementById('target-total').innerHTML = "$" + targetTotal.toFixed(2);
-    }
+    /*  if (targetTotal > 0) {
+         document.getElementById('target-total').innerHTML = "$" + targetTotal.toFixed(2);
+     } */
     //make sure the user doesn't see NaN when nothing has been calculated yet
     if (amountLeft >= 0) {
         document.getElementById('over-under').innerHTML = "Amount Left to Spend: $" + amountLeft.toFixed(2);
@@ -79,14 +79,28 @@ function targetInput(x) {
 function targetOutput(x) {
     x.style.backgroundColor = "white";
 }
+///#### Save JUST THE ORDER CALCULATION ####/////
+//create Object
+function BasketCount(fullCount, halfCount) {
+    this.fullCount = fullCount;
+    this.halfCount = halfCount;
+}
+//store the field inputs as a new object
+function saveBasketCount() {
+    var count = new BasketCount(
+        parseFloat(document.getElementById('full-count').value),
+        parseFloat(document.getElementById('half-count').value)
 
+    );
+    localStorage.setItem("count", JSON.stringify(count));
+}
 
 
 //create an Object FOR ITEM CALCULATIONS//////
 
-function OrderStuff(fullCount, halfCount, perFull, perHalf, itemCount, itemPrice, itemName) {
-    this.fullCount = fullCount;
-    this.halfCount = halfCount;
+function OrderStuff(/* fullCount, halfCount,  */perFull, perHalf, itemCount, itemPrice, itemName) {
+    /* this.fullCount = fullCount;
+    this.halfCount = halfCount; */
     this.perFull = perFull;
     this.perHalf = perHalf;
     this.itemCount = itemCount;
@@ -97,8 +111,8 @@ function OrderStuff(fullCount, halfCount, perFull, perHalf, itemCount, itemPrice
 //store the field inputs as a new object
 function storeLocal() {
     var stuff = new OrderStuff(
-        parseFloat(document.getElementById('full-count').value),
-        parseFloat(document.getElementById('half-count').value),
+        /*  parseFloat(document.getElementById('full-count').value),
+         parseFloat(document.getElementById('half-count').value), */
         parseFloat(document.getElementById('per-full').value),
         parseFloat(document.getElementById('per-half').value),
         parseFloat(document.getElementById('item-count').value),
@@ -125,7 +139,9 @@ if (typeof (Storage) !== "undefined") {
 
     populateForm();
 
-
+    var count = JSON.parse(localStorage.getItem("count"));
+    document.getElementById("full-count").value = count.fullCount;
+    document.getElementById("half-count").value = count.halfCount;
 } else {
 
     //if the browser doesn't support local storage display this message
@@ -135,23 +151,19 @@ if (typeof (Storage) !== "undefined") {
 
 
 function renderOrders() {
-    while (display.firstChild) {
-        display.removeChild(display.firstChild);
-    }
+    /*   while (display.firstChild) {
+          display.removeChild(display.firstChild);
+      } */
     let orders = JSON.parse(localStorage.getItem("stuff"));
-    if (orders !== null) {
+    /*  display.innerHTML = ""; */
 
+    let results = "<h2>Order for " + today + " Delivery </h2><br/><table><tr><td>Item Name</td><td>Count</td> <td>Price</td><td>Total</td><td>View</td><td>Delete</td></tr>";
+    for (let i = 0; i < orders.length; i++) {
 
-
-
-        let results = "<h2>Order for " + today + " Delivery </h2><br/><table><tr><td>Boxes</td><td>Item Name</td><td>Count</td> <td>Price</td><td>Total</td><td>View</td><td>Delete</td></tr>";
-        for (let i = 0; i < orders.length; i++) {
-
-            results += "<tr><td>" + Math.round(((orders[i].fullCount * orders[i].perFull) + (orders[i].halfCount * orders[i].perHalf)) / orders[i].itemCount) + "</td><td>" + orders[i].itemName + "</td><td>" + orders[i].itemCount + " Count </td><td> $ " + orders[i].itemPrice + ".00 </td><td> $ " + (orders[i].itemCount * orders[i].itemPrice) + "</td><td><button class='green' onclick='populateForm(" + i + ")'>View</button></td><td> <a href='#' onclick='deleteItem(" + i + ")'>Delete</a></td></tr>";
-        }
-        + "</table>";
-        display.innerHTML = results;
+        results += "<tr> <td>" + orders[i].itemName + "</td><td>" + orders[i].itemCount + " Count </td><td> $ " + orders[i].itemPrice + ".00 </td><td> $ " + (orders[i].itemCount * orders[i].itemPrice) + "</td><td><button class='green' onclick='populateForm(" + i + ")'>View</button></td><td> <a href='#' onclick='deleteItem(" + i + ")'>Delete</a></td></tr>";
     }
+    + "</table>";
+    display.innerHTML = results;
 }
 
 // clear the local variables
@@ -164,8 +176,8 @@ function populateForm(index) {
     if (index || index === 0) {
         displayIndex = index;
     }
-    document.getElementById("full-count").value = index > -1 ? stuff[displayIndex].fullCount : "";
-    document.getElementById("half-count").value = index > -1 ? stuff[displayIndex].halfCount : "";
+    /*     document.getElementById("full-count").value = index > -1 ? stuff[displayIndex].fullCount : "";
+        document.getElementById("half-count").value = index > -1 ? stuff[displayIndex].halfCount : ""; */
     document.getElementById("per-full").value = index > -1 ? stuff[displayIndex].perFull : "";
     document.getElementById("per-half").value = index > -1 ? stuff[displayIndex].perHalf : "";
     document.getElementById("item-count").value = index > -1 ? stuff[displayIndex].itemCount : "";
@@ -173,7 +185,6 @@ function populateForm(index) {
     document.getElementById("item-name").value = index > -1 ? stuff[displayIndex].itemName : "";
     //renderIcon(index > -1 ? stuff[displayIndex].itemName : "");
     orderQuantities();
-
 }
 
 function deleteItem(index) {
@@ -187,10 +198,10 @@ function deleteItem(index) {
 /* function renderIcon(itemName) {
     switch (itemName) {
         case "Apples":
-            document.getElementById('item-image').innerHTML = "<div id='circle'>Apples</div>";
+            document.getElementById('item-image').innerHTML = "<div id='circle'></div>";
             break;
         case "Bananas":
-            document.getElementById('item-image').innerHTML = "<div id='triangle-up'>Bananas</div>";
+            document.getElementById('item-image').innerHTML = "<div id='triangle-up'></div>";
             break;
 
 
@@ -205,18 +216,14 @@ function deleteItem(index) {
 
 function grandTotal() {
     let orders = JSON.parse(localStorage.getItem("stuff"));
-    if (orders != null) {
+    let total = 0;
+    for (let i = 0; i < orders.length; i++) {
 
-
-        let total = 0;
-        for (let i = 0; i < orders.length; i++) {
-
-            total += (orders[i].itemCount * orders[i].itemPrice);
-        }
-        //let total = orders.reduce((total, currentOrder) => { total += (currentOrder.itemCount * currentOrder.itemPrice); }, 0)
-
-        return total;
+        total += (orders[i].itemCount * orders[i].itemPrice);
     }
+    //let total = orders.reduce((total, currentOrder) => { total += (currentOrder.itemCount * currentOrder.itemPrice); }, 0)
+
+    return total;
 }
 
 function displayTotal() {
@@ -228,7 +235,7 @@ function getGrandTotal() {
 
 }
 
-/* function calculateBudget() {
+function calculateBudget() {
     var fullCount = parseInt(document.getElementById('full-count').value);
     var halfCount = parseInt(document.getElementById('half-count').value);
     var fullBudget = parseFloat(document.getElementById('full-budget').value);
@@ -237,4 +244,4 @@ function getGrandTotal() {
     let budgetTotal = (fullCount * fullBudget) + (halfCount * halfBudget);
     document.getElementById('budget-total').innerHTML = "$ " + budgetTotal.toFixed(2);
     document.getElementById('amount-left').innerHTML = "<br/>Over/Under: $ " + (budgetTotal - getGrandTotal()).toFixed(2);
-} */
+}

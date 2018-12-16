@@ -11,7 +11,8 @@ document.getElementById('item-name').onchange = function itemValues(event) {
             document.getElementById('item-count').value = 88;
             document.getElementById('item-price').value = 25;
             document.getElementById('item-title').innerHTML = document.getElementById('item-name').value;
-
+            // document.getElementById('item-name').onclick = orderQuantities();
+            document.getElementById('item-image').innerHTML = "<div id='circle'></div>"
             break;
 
         case "Bananas":
@@ -19,7 +20,7 @@ document.getElementById('item-name').onchange = function itemValues(event) {
             document.getElementById('item-price').value = 22;
             document.getElementById('item-title').innerHTML = document.getElementById('item-name').value;
             document.getElementById('item-name').onclick = orderQuantities();
-
+            document.getElementById('item-image').innerHTML = "<div id='triangle-up'></div>"
             break;
         case "Pears":
             document.getElementById('item-count').value = 120;
