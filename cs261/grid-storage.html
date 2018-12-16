@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Local Storage</title>
+
+    <link rel="stylesheet" type="text/css" href="css/grid-storage.css">
+
+</head>
+
+<body>
+
+    <h1>Code Topic 05 - Local Storage API</h1>
+    <h4>Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects</h4>
+    <hr></hr>
+    <h1>Pick colors, click cells, name and save your logos.</h1>
+
+    <span class=colorPicker>
+        <span class="color" id="black" onclick="changeBrush(id)">Black</span>
+        <span class="color" id="orange" onclick="changeBrush(id)">Orange</span>
+        <span class="color" id="blue" onclick="changeBrush(id)">Blue</span>
+        <span class="color" id="green" onclick="changeBrush(id)">Green</span>
+        <span class="color" id="red" onclick="changeBrush(id)">Red</span>
+        <br id="red">
+        <span class="color" id="cyan" onclick="changeBrush(id)">Cyan</span>
+        <span class="color" id="pink" onclick="changeBrush(id)">Pink</span>
+        <span class="color" id="yellow" onclick="changeBrush(id)">Yellow</span>
+        <span class="color" id="brown" onclick="changeBrush(id)">Brown</span>
+        <span class="color" id="white" onclick="changeBrush(id)">White</span>
+    </span>
+    <br>
+    <br>
+
+    <div class="grid">
+        <div class="row">
+            <div class="cell" id="c15" onclick="paint(id)"></div>
+            <div class="cell" id="c25" onclick="paint(id)"></div>
+            <div class="cell" id="c35" onclick="paint(id)"></div>
+            <div class="cell" id="c45" onclick="paint(id)"></div>
+            <div class="cell" id="c55" onclick="paint(id)"></div>
+        </div>
+        <div class="row">
+            <div class="cell" id="c14" onclick="paint(id)"></div>
+            <div class="cell" id="c24" onclick="paint(id)"></div>
+            <div class="cell" id="c34" onclick="paint(id)"></div>
+            <div class="cell" id="c44" onclick="paint(id)"></div>
+            <div class="cell" id="c54" onclick="paint(id)"></div>
+        </div>
+        <div class="row">
+            <div class="cell" id="c13" onclick="paint(id)"></div>
+            <div class="cell" id="c23" onclick="paint(id)"></div>
+            <div class="cell" id="c33" onclick="paint(id)"></div>
+            <div class="cell" id="c43" onclick="paint(id)"></div>
+            <div class="cell" id="c53" onclick="paint(id)"></div>
+        </div>
+        <div class="row">
+            <div class="cell" id="c12" onclick="paint(id)"></div>
+            <div class="cell" id="c22" onclick="paint(id)"></div>
+            <div class="cell" id="c32" onclick="paint(id)"></div>
+            <div class="cell" id="c42" onclick="paint(id)"></div>
+            <div class="cell" id="c52" onclick="paint(id)"></div>
+        </div>
+        <div class="row">
+            <div class="cell" id="c11" onclick="paint(id)"></div>
+            <div class="cell" id="c21" onclick="paint(id)"></div>
+            <div class="cell" id="c31" onclick="paint(id)"></div>
+            <div class="cell" id="c41" onclick="paint(id)"></div>
+            <div class="cell" id="c51" onclick="paint(id)"></div>
+        </div>
+    </div>
+    <br>
+
+    <input type="button" value="Reset the Grid" onclick="resetGrid()">
+    <br>
+    <br>
+
+    <form>
+        Save your work:
+        <input type="text" id="firstname" value="logo">
+        <input type="button" value="Save" onclick="save()">
+    </form>
+
+    <br>
+
+    <h2>Previously saved Logos</h2>
+    <input type="button" value="Refresh List" onclick="loadLocalStorage()">
+    <br>
+    <br>
+    <div id="logolist"></div>
+    <br>
+
+    <script language="JavaScript" type="text/javascript" src="scripts/grid-storage.js"></script>
+</body>
+
+</html>

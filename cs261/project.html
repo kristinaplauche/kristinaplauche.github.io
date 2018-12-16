@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>JavaScript Events & Local Storage| onchange, onload, mouse overs, set get and clear storage</title>
+    <title>Project | Final Project</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <meta name="description" content="cs-261 javascript objects code fluency ">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <meta name="description" content="cs-261 final project ">
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
 
@@ -21,178 +21,172 @@
 
     <!--- ####### Body content begins ####### -->
     <div class="container">
-        <div class="box">
+        <div class="left">
 
-            <div class="card text-left">
-                <div class="card-header full green">
+            <div class="box one" id="overlay">
 
-                    <input name="account_id" id="account_id" type="hidden" value="<?php echo $_SESSION['client']['account_id'];?>">
-                    <h2> Order Form</h2>
-                    <p>
-                        <b>Today'sDate:</b>
-                        <span id="todayDate"></span>
-                    </p>
-                    <div id="overlay" onchange="dismissOverlay()">
-                        <h2 id="overlay-text"></h2>
-                        <p>
-                            <strong># Full Bushels </strong>
-                            <input type="number" onfocus="targetInput(this)" required onfocusout="targetOutput(this)" name="full-count" id="full-count"
-                                min="0" step="1">
-                        </p>
-                        <!-- Budget data from co-op info. Used for calculations, but hidden from viewer.-->
-                        <p></p>
-                        <strong>Full Budget $</strong>
-                        <input type="number" name="full-budget" id="full-budget" value="10">
-                        </p>
-                        <p>
-                            <strong># Partial Bushels </strong>
-                            <input type="number" onfocus="targetInput(this)" required onfocusout="targetOutput(this)" name="half-count" id="half-count"
-                                size="10" onchange="orderQuantities()" min="0" step="1">
-                        </p>
-
-                        <!-- Budget data from co-op info. Used for calculations, but hidden from viewer.-->
-                        <p>
-                            <strong>Small Budget $</strong>
-                            <input type="number" name="half-budget" id="half-budget" size="10" value="5">
-                        </p>
-                        <h2 class="btn-primary" id="overlay-click"></h2>
+                <span id="overlay-text"></span>
 
 
-                    </div>
 
-                    <h4>Purchasing Budget:
-                        <span id="target-total"></span>
-                    </h4>
+
+                <div id="large-basket">
+                    <strong># Large Baskets </strong>
+                    <input class="basket-item" type="number" onfocus="overlay()" onfocusout="dismissOverlay()" id="full-count" min="0" step="1">
+                </div>
+                <div id="small-basket">
+                    <strong># Small Baskets </strong>
+                    <input class="basket-item" type="number" onfocus="targetInput(this)" required onfocusout="targetOutput(this)" name="half-count"
+                        id="half-count" onchange="orderQuantities()" min="0" step="1">
+                    <!-- Budget data from co-op info. Used for calculations, but hidden from viewer.-->
+                    <input type="hidden" name="full-budget" id="full-budget" value="10">
+                    <input type="hidden" name="half-budget" id="half-budget" size="10" value="5">
+
+                </div>
+                <span class="btn-primary" id="overlay-click"></span>
+                <form action="project.html">
+                    <input type="submit" class="btn red" onclick="saveBasketCount()" value="Save">
+                </form>
+            </div>
+
+            <div class="box two">
+
+                <h2>Purchasing Budget:
+                    <!--  <span id="target-total"></span> -->
+                    <span id="budget-total"></span>
+                    <br/>
+                    <button class="btn-primary" onclick="calculateBudget()">Calculate</button>
+                </h2>
+
+
+
+
+            </div>
+
+
+
+            <!-- Items section -->
+
+
+            <div class="card">
+                <div class="card-header brown">
+                    <h4 id="item-title">Item</h4>
                 </div>
                 <div class="card-body">
 
-
-
-
-                    <!-- Items section -->
-                    <div class="card item">
-                        <div class="card-header brown">
-                            <h4>Item</h4>
-                        </div>
-                        <div class="card-body">
-                            <div>
-                                <label>Per Full Bushel:
-
-                                </label>
-                            </div>
-                            <div>
-                                <input type="number" required name="per-full" id="per-full" onchange="orderQuantities()" min="0" step="1">
-                            </div>
-
-                            <div>
-                                <label>Per Partial Bushel:
-
-                                </label>
-                            </div>
-                            <div>
-                                <input type="number" required name="per-half" id="per-half" onchange="orderQuantities()" min="0" step="1">
-                            </div>
-                            <div>
-                                <label>Item Name:
-                                </label>
-                            </div>
-
-                            <div>
-                                <select required name="item-name" id="item-name">
-
-                                    <option value="Apples">Apples</option>
-                                    <option value="Bananas">Bananas</option>
-                                    <option value="Potatoes">Potatoes</option>
-                                    <option value="Onions">Onions</option>
-                                    <option value="Tomatoes">Tomatoes</option>
-                                    <option value="Lettuce">Lettuce</option>
-                                    <option value="Cucumber">Cucumber</option>
-                                    <option value="Carrots">Carrots</option>
-                                    <option value="Pears">Pears</option>
-                                    <option value="Tangerines">Tangerines</option>
-                                    <option value="Plums">Plums</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label># In Box:
-
-                                </label>
-                            </div>
-                            <div>
-                                <input type="number" required name="item-count" id="item-count" onchange="orderQuantities()" min="0" step="1">
-                            </div>
-
-                            <div>
-                                <input type="hidden" required name="item-unit" id="item-unit" value="count">
-                            </div>
-                            <div>
-                                <label>Box Price:
-
-                                </label>
-                            </div>
-                            <div>
-                                <input type="number" name="item-price" required id="item-price" placeholder="$0.00" onchange="orderQuantities()" min="0"
-                                    step=".5">
-                            </div>
-                            <p>
-                                <strong>Quantity:</strong>
-                                <span id="item-quantity-display" onchange="orderQuantities()"></span>
-                            </p>
-                            <input type="hidden" name="item-quantity" id="item-quantity" onchange="orderQuantities()">
-
-
-
-
-                            <p>
-                                <strong>Item Total:</strong>
-                                <span id="item-total-display" onchange="orderQuantities()"></span>
-                            </p>
-                            <input type="hidden" name="item-total" id="item-total" onchange="orderQuantities()">
-                        </div>
-                    </div>
-
-
-
-
-
-                    <hr/>
-                    <div class="card-footer">
+                    <div id="item-overlay">
                         <div>
+                            <span id="item-overlay-text"></span>
 
-                            <h2>Order Total:
-                                <span id="grand-total-display" onchange="orderQuantities()"></span>
-                            </h2>
-                            <input type="hidden" readonly step=".01" name="grand-total" id="grand-total" onchange="orderQuantities()">
-                            <h4>
-                                <span id="over-under"></span>
-                            </h4>
                         </div>
 
+                        <div>
+                            <select required name="item-name" id="item-name">
+                                <option name="item-name" value="">Please select an item</option>
+                                <option name="item-name" value="Apples">Apples 88 count $25.00</option>
+                                <option name="item-name" value="Bananas">Bananas 17 bunches $22.00</option>
+                                <option name="item-name" value="Pears">Pears</option>
+                                <option name="item-name" value="Oranges">Oranges</option>
+                                <option name="item-name" value="Plums">Plums</option>
+                                <option name="item-name" value="Pineapple">Pineapple</option>
+                            </select>
+                        </div>
+                        <span id="item-image"></span>
+
+
+                        <input type="hidden" required name="item-count" id="item-count" min="0" step="1">
+
+                        <input type="hidden" name="item-price" required id="item-price" placeholder="$0.00" min="0" step=".5">
+                        <span id="item-overlay-click"></span>
                     </div>
+                    <div id="per-overlay">
+                        <span id="per-overlay-text"></span>
+
+
+                        <strong>Per Large Basket:
+
+                        </strong>
+
+
+                        <input class="basket-item" type="number" onfocus="targetInput(this)" required onfocusout="targetOutput(this)" name="per-full"
+                            id="per-full" onchange="orderQuantities()" min="0" step="1">
+
+                        <strong>
+                            <br/>
+                        </strong>
+
+                        <strong>Per Small Basket:
+
+                        </strong>
+
+
+                        <input class="basket-item" type="number" onfocus="targetInput(this)" required onfocusout="targetOutput(this)" name="per-half"
+                            id="per-half" onchange="orderQuantities()" min="0" step="1">
+                        <span id="per-overlay-click"></span>
+                    </div>
+
+                    <p>
+                        <strong>Quantity:</strong>
+                        <span id="item-quantity-display" onchange="orderQuantities()"></span>
+                    </p>
+
+
+
 
 
                     <p>
-                        <strong>Pickup Date:</strong>
-
-
-                        <input type="date" name="order-date" required id="order-date">
+                        <strong>Item Total:</strong>
+                        <span id="item-total-display" onchange="orderQuantities()"></span>
                     </p>
 
+                </div>
+                <form action="project.html">
+                    <input type="submit" class="btn red" onclick="storeLocal()" value="Add to Order">
+                </form>
+            </div>
+
+        </div>
+        <div class="three">
+            <div class="card">
+                <img src="images/brown-full.png">
+                <h2>
+                    <!-- <span id="over-under"></span> -->
+                    <h4 id="amount-left"></h4>
+                </h2>
+                <div class="card">
+                    <div class="card-header green">
+                        header
+                    </div>
+                    <div class="card-body">
+
+                        <span id="result"></span>
+                    </div>
+
+                </div>
+                <hr/>
+                <div class="card-footer">
+                    <div>
+
+                        <h2>Order Total:
+                            <span id="grand-total-display" onchange="orderQuantities()"></span>
+
+                            <span id="grand-total"></span>
+
+                        </h2>
+
+                        <input type="hidden" readonly step=".01" name="grand-total" id="grand-total" onchange="orderQuantities()">
+
+                    </div>
+
                     <form action="project.html">
-                        <input type="submit" class="btn red" onclick="storeLocal()" value="Save">
+                        <input type="submit" class="btn green" onclick="clearLocal()" value="Clear All">
                     </form>
-                    <form action="project.html">
-                        <input type="submit" class="btn green" onclick="clearLocal()" value="Clear">
-                    </form>
-
-
-
-
 
                 </div>
             </div>
 
         </div>
+
     </div>
 
 
@@ -205,5 +199,6 @@
 <script src="scripts/order-form.js"></script>
 
 <script src="scripts/project.js "></script>
+<script src="scripts/project-animations.js "></script>
 
 </html>
