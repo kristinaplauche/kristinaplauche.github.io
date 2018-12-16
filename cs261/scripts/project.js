@@ -40,19 +40,19 @@ function orderQuantities() {
         document.getElementById('grand-total-display').innerHTML = "$ " + grandTotal.toFixed(2);
     }
     //make sure the user doesn't see NaN when nothing has been calculated yet
-    if (targetTotal > 0) {
-        document.getElementById('target-total').innerHTML = "$" + targetTotal.toFixed(2);
-    }
+    /*  if (targetTotal > 0) {
+         document.getElementById('target-total').innerHTML = "$" + targetTotal.toFixed(2);
+     } */
     //make sure the user doesn't see NaN when nothing has been calculated yet
     if (amountLeft >= 0) {
         document.getElementById('over-under').innerHTML = "Amount Left to Spend: $" + amountLeft.toFixed(2);
-
-
-        if (amountLeft < 0) {
-            document.getElementById('grand-total-display').innerHTML = "<br/>You overspent by $ " + amountLeft.toFixed(2);
-
-        }
     }
+
+    if (amountLeft < 0) {
+        document.getElementById('grand-total-display').innerHTML = "<br/>You overspent by $ " + amountLeft.toFixed(2);
+
+    }
+
 }
 //get Today's date
 var today = new Date();
