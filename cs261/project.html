@@ -18,11 +18,61 @@
     <div class="greeting">
         <h1>Build a Basket Order Form</h1>
     </div>
-    <div class="greeting2">
+    <div>
         <p>You've received lots of orders for holiday gift baskets. Now you need to figure out how much to purchase!
             <a href="#" onclick="overlay()">Click to Get Started</a>
         </p>
+        <div id "img-header">
+            <img class="bushels" src="images/brown-full.png">
+            <img class="bushels2" src="images/brown-half.png">
+            <img class="bushels" src="images/red-full.png">
+            <img class="bushels2" src="images/red-half.png">
+            <img class="bushels" src="images/green-full.png">
+            <img class="bushels2" src="images/green-half.png">
+            <img class="bushels" src="images/brown-full.png">
+            <img class="bushels2" src="images/brown-half.png">
+            <img class="bushels" src="images/red-full.png">
+            <img class="bushels2" src="images/red-half.png">
+            <img class="bushels" src="images/green-full.png">
+            <img class="bushels2" src="images/green-half.png">
+            <img class="bushels" src="images/brown-full.png">
+            <img class="bushels2" src="images/brown-half.png">
+            <img class="bushels" src="images/red-full.png">
+            <img class="bushels2" src="images/red-half.png">
+            <img class="bushels" src="images/green-full.png">
+            <img class="bushels2" src="images/green-half.png">
+            <img class="bushels" src="images/brown-full.png">
+            <img class="bushels2" src="images/brown-half.png">
+            <img class="bushels" src="images/red-full.png">
+            <img class="bushels2" src="images/red-half.png">
+            <img class="bushels" src="images/green-full.png">
+            <img class="bushels2" src="images/green-half.png">
+        </div>
     </div>
+    <div class="box one" id="overlay">
+
+        <span id="overlay-text"></span>
+
+
+
+
+        <div id="large-basket">
+            <strong># Large Baskets </strong>
+            <input class="basket-item" type="number" id="full-count" min="0" step="1" value="0">
+        </div>
+        <div id="small-basket">
+            <strong># Small Baskets </strong>
+            <input class="basket-item" type="number" onfocus="targetInput(this)" required onfocusout="targetOutput(this)" name="half-count"
+                id="half-count" onchange="orderQuantities()" min="0" step="1" value="0">
+            <!-- Budget data from co-op info. Used for calculations, but hidden from viewer.-->
+            <input type="hidden" name="full-budget" id="full-budget" value="10">
+            <input type="hidden" name="half-budget" id="half-budget" size="10" value="5">
+
+        </div>
+        <span class="btn-primary" id="overlay-click"></span>
+
+    </div>
+
 </header>
 
 <body onload="orderQuantities()">
@@ -30,174 +80,153 @@
     <!--- ####### Body content begins ####### -->
     <div class="container">
 
-        <div class="left">
-
-            <div class="box one" id="overlay">
-
-                <span id="overlay-text"></span>
 
 
 
+        <!-- Items section -->
 
-                <div id="large-basket">
-                    <strong># Large Baskets </strong>
-                    <input class="basket-item" type="number" id="full-count" min="0" step="1" value="0">
+
+        <div class="card">
+            <div class="card-header brown">
+                <h2 id="item-title">Add Item to Order Form</h2>
+            </div>
+            <div class="card-body">
+
+                <div id="item-overlay">
+
+                    <div>
+                        <span id="item-overlay-text"></span>
+
+                    </div>
+
+                    <div>
+                        <select required name="item-name" id="item-name">
+                            <option name="item-name" value="">Please select an item</option>
+                            <option name="item-name" value="Apples">Apples 88 count $25.00</option>
+                            <option name="item-name" value="Bananas">Bananas 17 bunches $22.00</option>
+                            <option name="item-name" value="Pears">Pears 120 count $35.00</option>
+                            <option name="item-name" value="Oranges">Oranges 80 count $16.00</option>
+                            <option name="item-name" value="Plums">Plums 200 count $28.00</option>
+                            <option name="item-name" value="Pineapple">Pineapple 8 count $12.00</option>
+                        </select>
+                    </div>
+                    <span id="item-image"></span>
+
+
+                    <input type="hidden" required name="item-count" id="item-count" min="0" step="1">
+
+                    <input type="hidden" name="item-price" required id="item-price" placeholder="$0.00" min="0" step=".5">
+                    <span id="item-overlay-click"></span>
                 </div>
-                <div id="small-basket">
-                    <strong># Small Baskets </strong>
-                    <input class="basket-item" type="number" onfocus="targetInput(this)" required onfocusout="targetOutput(this)" name="half-count"
-                        id="half-count" onchange="orderQuantities()" min="0" step="1" value="0">
-                    <!-- Budget data from co-op info. Used for calculations, but hidden from viewer.-->
-                    <input type="hidden" name="full-budget" id="full-budget" value="10">
-                    <input type="hidden" name="half-budget" id="half-budget" size="10" value="5">
+                <div id="per-overlay">
+                    <span id="per-overlay-text"></span>
 
+
+                    <strong>Per Large Basket:
+
+                    </strong>
+
+
+                    <input class="basket-item" type="number" onfocus="targetInput(this)" required onfocusout="targetOutput(this)" name="per-full"
+                        id="per-full" onchange="orderQuantities()" min="0" step="1">
+
+                    <strong>
+                        <br/>
+                    </strong>
+
+                    <strong>Per Small Basket:
+
+                    </strong>
+
+
+                    <input class="basket-item" type="number" onfocus="targetInput(this)" required onfocusout="targetOutput(this)" name="per-half"
+                        id="per-half" onchange="orderQuantities()" min="0" step="1">
+                    <span id="per-overlay-click"></span>
                 </div>
-                <span class="btn-primary" id="overlay-click"></span>
+
+                <h2>
+                    <strong>Quantity:</strong>
+                    <span id="item-quantity-display" onchange="orderQuantities()"></span>
+                </h2>
+                <br/>
+
+
+
+
+                <h2>
+                    <strong>Item Total:</strong>
+                    <span id="item-total-display" onchange="orderQuantities()"></span>
+                </h2>
 
             </div>
 
+            <form action="project.html">
+                <input type="submit" class="button red" onclick="storeLocal()" value="Add to Order">
+            </form>
+
+        </div>
 
 
-            <!-- Items section -->
+        <!--- #### Right card begins #### -->
+        <!--  <div class="three"> -->
+        <div class="card">
+
+            <!--   <img class="bushels" src="images/brown-full.png">
+                <img class="bushels2" src="images/brown-half.png">
+                <img class="bushels" src="images/red-full.png">
+                <img class="bushels2" src="images/red-half.png">
+                <img class="bushels" src="images/green-full.png">
+                <img class="bushels2" src="images/green-half.png">
+                <img class="bushels" src="images/brown-full.png">
+                <img class="bushels2" src="images/brown-half.png">
+                <img class="bushels" src="images/red-full.png">
+                <img class="bushels2" src="images/red-half.png">
+                <img class="bushels" src="images/green-full.png">
+                <img class="bushels2" src="images/green-half.png"> -->
 
 
-            <div class="card">
-                <div class="card-header brown">
-                    <h4 id="item-title">Item</h4>
+
+
+
+
+            <div class="card-header green">
+                <h2>Order Form</h2>
+            </div>
+            <div class="card-body">
+
+                <span id="result"></span>
+            </div>
+
+
+            <hr/>
+            <div class="card-footer">
+                <div>
+
+                    <h2>Order Total:
+                        <span id="grand-total-display" onchange="orderQuantities()"></span>
+
+
+
+                    </h2>
+
+
+
                 </div>
-                <div class="card-body">
-
-                    <div id="item-overlay">
-                        <div>
-                            <span id="item-overlay-text"></span>
-
-                        </div>
-
-                        <div>
-                            <select required name="item-name" id="item-name">
-                                <option name="item-name" value="">Please select an item</option>
-                                <option name="item-name" value="Apples">Apples 88 count $25.00</option>
-                                <option name="item-name" value="Bananas">Bananas 17 bunches $22.00</option>
-                                <option name="item-name" value="Pears">Pears 120 count $35.00</option>
-                                <option name="item-name" value="Oranges">Oranges 80 count $16.00</option>
-                                <option name="item-name" value="Plums">Plums 200 count $28.00</option>
-                                <option name="item-name" value="Pineapple">Pineapple 8 count $12.00</option>
-                            </select>
-                        </div>
-                        <span id="item-image"></span>
-
-
-                        <input type="hidden" required name="item-count" id="item-count" min="0" step="1">
-
-                        <input type="hidden" name="item-price" required id="item-price" placeholder="$0.00" min="0" step=".5">
-                        <span id="item-overlay-click"></span>
-                    </div>
-                    <div id="per-overlay">
-                        <span id="per-overlay-text"></span>
-
-
-                        <strong>Per Large Basket:
-
-                        </strong>
-
-
-                        <input class="basket-item" type="number" onfocus="targetInput(this)" required onfocusout="targetOutput(this)" name="per-full"
-                            id="per-full" onchange="orderQuantities()" min="0" step="1">
-
-                        <strong>
-                            <br/>
-                        </strong>
-
-                        <strong>Per Small Basket:
-
-                        </strong>
-
-
-                        <input class="basket-item" type="number" onfocus="targetInput(this)" required onfocusout="targetOutput(this)" name="per-half"
-                            id="per-half" onchange="orderQuantities()" min="0" step="1">
-                        <span id="per-overlay-click"></span>
-                    </div>
-
-                    <p>
-                        <strong>Quantity:</strong>
-                        <span id="item-quantity-display" onchange="orderQuantities()"></span>
-                    </p>
-
-
-
-
-
-                    <p>
-                        <strong>Item Total:</strong>
-                        <span id="item-total-display" onchange="orderQuantities()"></span>
-                    </p>
-
+                <div>
+                    <button onclick="pagePrint()" class="btn-primary">Print this page</button>
                 </div>
                 <form action="project.html">
-                    <input type="submit" class="btn red" onclick="storeLocal()" value="Add to Order">
+                    <input type="submit" class="button green" onclick="clearLocal()" value="Clear All">
                 </form>
+
             </div>
-
         </div>
-        <div class="three">
-            <div class="card">
 
-                <img class="bushels" src="images/brown-full.png">
-                <img class="bushels2" src="images/brown-half.png">
-                <img class="bushels" src="images/red-full.png">
-                <img class="bushels2" src="images/red-half.png">
-                <img class="bushels" src="images/green-full.png">
-                <img class="bushels2" src="images/green-half.png">
-                <img class="bushels" src="images/brown-full.png">
-                <img class="bushels2" src="images/brown-half.png">
-                <img class="bushels" src="images/red-full.png">
-                <img class="bushels2" src="images/red-half.png">
-                <img class="bushels" src="images/green-full.png">
-                <img class="bushels2" src="images/green-half.png">
-
-
-
-
-
-                <div class="card">
-                    <div class="card-header green">
-                        header
-                    </div>
-                    <div class="card-body">
-
-                        <span id="result"></span>
-                    </div>
-
-                </div>
-                <hr/>
-                <div class="card-footer">
-                    <div>
-
-                        <h2>Order Total:
-                            <span id="grand-total-display" onchange="orderQuantities()"></span>
-
-
-
-                        </h2>
-
-
-
-                    </div>
-                    <div>
-                        <button onclick="pagePrint()" class="btn-primary">Print this page</button>
-                    </div>
-                    <form action="project.html">
-                        <input type="submit" class="btn green" onclick="clearLocal()" value="Clear All">
-                    </form>
-
-                </div>
-            </div>
-
-        </div>
+        <!--  </div> -->
 
     </div>
 
-
+    </div>
 </body>
 
 

@@ -144,7 +144,7 @@ function renderOrders() {
 
 
 
-        let results = "<h2>Order for " + today + " Delivery </h2><br/><table><tr><td>Boxes</td><td>Item Name</td><td>Count</td> <td>Price</td><td>Total</td><td>View</td><td>Delete</td></tr>";
+        let results = "<h3>Order date: " + today + " </h3><br/><table><tr><td>Boxes</td><td>Item Name</td><td>Count</td> <td>Price</td><td>Total</td><td>View</td><td>Delete</td></tr>";
         for (let i = 0; i < orders.length; i++) {
 
             results += "<tr><td>" + Math.round(((orders[i].fullCount * orders[i].perFull) + (orders[i].halfCount * orders[i].perHalf)) / orders[i].itemCount) + "</td><td>" + orders[i].itemName + "</td><td>" + orders[i].itemCount + " Count </td><td> $ " + orders[i].itemPrice + ".00 </td><td> $ " + (orders[i].itemCount * orders[i].itemPrice) + "</td><td><button class='green' onclick='populateForm(" + i + ")'>View</button></td><td> <a href='#' onclick='deleteItem(" + i + ")'>Delete</a></td></tr>";

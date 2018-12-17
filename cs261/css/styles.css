@@ -14,6 +14,18 @@ body {
     min-height: 100%;
 }
 
+header {
+    margin: 1%;
+    padding: 1%;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.img-header {
+    text-align: center;
+}
+
 h1, h2, h3, h4, h5 {
     display: inline;
     margin: 0;
@@ -38,68 +50,84 @@ h1, h2, h3, h4, h5 {
 .container {
     margin: 1%;
     padding: 1%;
-    display: grid;
+    /*   display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1%;
-    grid-auto-rows: minmax(35px, auto);
+    grid-auto-rows: minmax(35px, auto); */
+    display: flex;
+    justify-content: space-around;
 }
 
 .card {
     background-color: white;
     border: 1px solid rgba(67, 44, 40, .5);
-    padding: 0;
-    width: 100%;
-    grid-column: 1 / 3;
+    border-radius: 10px;
+    padding: 1%;
+    margin: 1%;
+    width: 40%;
+    /*  grid-column: 1 / 3;
     grid-row: 2/5;
-    margin-right: 40px;
+    margin-right: 40px; */
 }
 
 form {
     display: flex;
-    align-items: flex-end;
     justify-content: flex-end;
+}
+
+input.button {
+    border: 1px gray;
+    border-radius: 5px;
+    padding: 2%;
+    text-align: center;
 }
 
 .card-header {
     padding: 1%;
+    margin: 1%;
 }
 
 .card-body {
     padding: 1%;
+    margin: 1%;
 }
 
-.box {
-    text-align: center;
-    justify-content: center;
+.inner-card {
+    width: 50%;
+    height: auto;
+    border-radius: 5%;
 }
 
-.box>div {}
-
-.one {
+/* .one {
     grid-column: 1 / 3;
     grid-row: 1/2;
     display: flex;
     justify-content: space-around;
 }
 
-/* .two {
+.two {
     grid-column: 2 / 3;
     grid-row: 1/2;
     display: flex;
-} */
+}
 
 .three {
     grid-column: 3 / 5;
     grid-row: 1/5;
-}
+} */
 
-.left {
+/* .left {
     grid-column: 1 / 3;
     grid-row: 1/5;
     display: grid;
-}
+} */
 
 .card>img {
+    width: 50px;
+    height: auto;
+}
+
+div>img {
     width: 50px;
     height: auto;
 }
@@ -120,13 +148,16 @@ hr {
     border: 1px solid #9f2322;
 }
 
-#overlay {
+#overlay, #item-overlay, #per-overlay {
     display: block;
+    padding: 1%;
+    border-radius: 10px;
 }
 
 .image-border {
     display: flex;
     justify-content: space-around;
+    width: 95%;
 }
 
 img.bushels {
