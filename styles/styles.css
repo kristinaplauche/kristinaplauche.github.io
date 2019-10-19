@@ -1,8 +1,4 @@
-/* CIT 230 - Assignment Portal CSS Template */
-
-/* You may use #HEX or color names */
-
-/* * is a wildcard referring to all elements. */
+/* Portfolio Pages */
 
 * {
     margin: 0;
@@ -132,7 +128,7 @@ header, main, footer {
 
 header, footer, footer a {
     text-align: center;
-    background-color: navy;
+    background-color: charcoal;
     color: whitesmoke;
 }
 
