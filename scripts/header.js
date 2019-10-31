@@ -5,4 +5,5 @@ request.send();
 request.onload = function () {
     var headerInfo = request.response;
     document.getElementById('name').innerHTML = headerInfo.header[0].name;
-    document.getElementById('title').innerHTML = headerInfo.header[0].title;}
+    document.getElementById('title').innerHTML = headerInfo.header[0].title;
+    document.getElementById('footer').innerHTML = headerInfo.header[0].footer;}
