@@ -10,7 +10,7 @@ body {
     line-height: 32px;
     font-family: 'Helvetica', sans-serif/* Ubuntu, sans-serif */
     ;
-    color: black/* #xxxxxx */
+    color: black
     ;
 }
 
@@ -48,26 +48,30 @@ body {
 
 .wrapper h1 {
     display: block;
-    background-color: lightsalmon;
+    background-color: black;
+    color: whitesmoke;
     padding: 1%;
-    color: black;
     border-radius: 5px;
 }
 
 .fluency h2 {
     display: block;
-    background-color: paleturquoise;
+    background-color: lightblue;
     border-radius: 5px;
     padding: .5%;
 }
 
 .btn-success {
     background-color: lightgray;
+   /*  background-image: linear-gradient(gray, lightgray,gray); */
     border-radius: 5px;
-    border: black;
-    padding: 1%;
+    border: solid gray 1px;
+    padding: .5%;
     text-align: center;
     font-weight: bold;
+}
+.btn-success:hover {
+    background-image: linear-gradient(gray, lightgray,gray);
 }
 
 code {
@@ -90,11 +94,17 @@ hr {
 }
 
 .btn-primary {
-    background-color: rgb(150, 88, 137);
+    background-color: rgb(43, 43, 43);
+    /*background-image: linear-gradient(black, darkslategray, black);*/
+    color: white;
     border-radius: 5px;
-    border: black;
+    border: solid black 1px;
     padding: 1%;
     text-align: center;
+    box-shadow: 2px 2px lightgrey;
+}
+.btn-primary:hover {
+    background-image: linear-gradient(gray, black, gray);
 }
 
 .button-save {
@@ -110,19 +120,22 @@ hr {
 h1 {
     font-size: 32px/* x.xrem  (rem is a unit of measure) */
     ;
-    color: whitesmoke/* #xxxxxx */
+    color: whitesmoke
     ;
 }
 
 h2 {
-    font-size: 24px/* x.xrem */
+    font-size: 24px
     ;
+}
+h4 {
+    color: gray;
 }
 
 header, main, footer {
     margin: 1.25rem auto;
     padding: .5rem;
-    max-width: 80%/* xxxpx (px = pixel is a unit of measure)  */
+    max-width: 80%/* (px = pixel is a unit of measure)  */
     ;
 }
 
@@ -131,6 +144,7 @@ header, footer, footer a {
     background-color: black;
     color: whitesmoke;
     padding-left: 2rem;
+   border-radius: 5px;
 }
 
 header img {
@@ -142,7 +156,7 @@ header img {
 nav {
     margin: 1.25rem auto;
     padding: .5rem;
-    max-width: 700px/* xxxpx (px = pixel is a unit of measure)  */
+    max-width: 700px
     ;
 }
 
