@@ -1,0 +1,14 @@
+{
+    "header" : [
+    {
+      "name": "Kristina Plauché",
+      "title": "Junior Fulll Stack Developer",
+      "motto": "If you plan to succeed, do so from the beginning.",
+      "degree": "BS Web Design & Development",
+      "emphasis": "Development",
+      "gpa": "3.9",
+      "graduation": "December 2018",
+      "wordPressUserSince": 2011,
+      "codeEditor": "Visual Studio Code"
+      
+    }]}
