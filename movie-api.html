@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>AJAX Fluency | Use an XMLHTTPRequest to Consume a JSON Web Service</title>
+
+    <meta name="description" content="cs-261 javascript objects code fluency ">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+    
+
+        function readSearch() {
+            var search = $("#search").val();
+            var params = { s: search, apikey: "731f4a30" };
+
+            var results = $("#result");
+            results.empty()
+            $.get("http://www.omdbapi.com/", params, function (req, res) {
+                var results = $("#result");
+
+                for (var i = 0; i < req.Search.length; i++) {
+                    var title = req.Search[i].Title;
+                    var year = req.Search[i].Year;
+                    var movieID = req.Search[i].imdbID
+                    results.append("<li>" + title + " - " + year + " <button onclick= 'details(\"" + movieID + "\")'>Details</button></li>");
+                }
+            });
+        }
+        function details(id) {
+            console.log(id);
+
+            var params = { i: id, apikey: "731f4a30" };
+
+            $.get("http://www.omdbapi.com/", params, function (req, res) {
+                console.log(req);
+                var extra = $("#extra");
+                extra.empty();
+
+                extra.append("<p>Plot: " + req.Plot + "</p><img src='" + req.Poster + "'>");
+
+            });
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <main>
+
+        <div>
+            <h1>Search for a Movie</h1>
+            <input type='text' id='search'>
+            <button onclick="readSearch()">Search</button>
+
+
+        </div>
+        <div>
+            <h1>Results</h1>
+            <ul id="result">
+
+            </ul>
+            <h1>Extra</h1>
+            <ul id="extra">
+
+            </ul>
+
+        </div>
+    </main>
+</body>
+
+</html>
+</body>
+
+
+</html>
